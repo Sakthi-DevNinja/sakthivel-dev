@@ -25,8 +25,8 @@ import { Product } from './types';
 
 type ViewState = 'HOME' | 'PRODUCT_LAB' | 'PRODUCT_DETAIL';
 
-const PROFILE_IMAGE = "./public/owner/sakthi.png";
-const ABOUT_IMAGE = "./public/owner/about-sakthi.png";
+const PROFILE_IMAGE = "./owner/sakthi.png";
+const ABOUT_IMAGE = "./owner/about-sakthi.png";
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);

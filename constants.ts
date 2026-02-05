@@ -114,14 +114,14 @@ export const PRODUCTS: Product[] = [
     liveLink: "https://saporitosonline.com/",
     isConfidential: false,
     gallery: [
-      "./public/products/saporitos/home.png",
-      "./public/products/saporitos/menu.png",
-      "./public/products/saporitos/catering.png",
-      "./public/products/saporitos/daily.png",
-      "./public/products/saporitos/coupons.png",
-      "./public/products/saporitos/about.png",
-      "./public/products/saporitos/contact.png",
-      "./public/products/saporitos/seo.png",
+      "./products/saporitos/home.png",
+      "./products/saporitos/menu.png",
+      "./products/saporitos/catering.png",
+      "./products/saporitos/daily.png",
+      "./products/saporitos/coupons.png",
+      "./products/saporitos/about.png",
+      "./products/saporitos/contact.png",
+      "./products/saporitos/seo.png",
     ]
   },
 
