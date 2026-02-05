@@ -138,7 +138,7 @@ const App: React.FC = () => {
              <img 
                src={PROFILE_IMAGE} 
                alt={`${PERSON_NAME} – Professional Portrait`} 
-               className="h-full w-auto max-h-[90vh] object-contain object-bottom pointer-events-none select-none"
+               className="h-full w-auto max-h-[90vh] object-contain pointer-events-none select-none"
                style={{
                  maskImage: 'linear-gradient(to bottom, black 30%, transparent 80%)',
                  WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 80%)'
