@@ -134,7 +134,7 @@ const App: React.FC = () => {
       <main className="flex-grow">
         {/* Cinematic Hero Section */}
         <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black px-6">
-          <div className="absolute inset-0 flex items-center justify-center pt-40">
+          <div className="absolute inset-0 flex items-center justify-center pt-28 md:pt-40">
              <img 
                src={PROFILE_IMAGE} 
                alt={`${PERSON_NAME} – Professional Portrait`} 
@@ -147,7 +147,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Architecture & Full Stack Engineering */}
-          <div className="relative z-20 flex flex-col items-center text-center mt-[30rem] md:mt-[30rem]">
+          <div className="relative z-20 flex flex-col items-center text-center mt-[32rem] md:mt-[30rem]">
              <h2 className="text-[#3B82F6] font-bold tracking-[0.2em] md:tracking-[0.4em] mb-2 text-[0.6rem] md:text-xl drop-shadow-lg">
                FULL STACK WEB DEVELOPER | ERP & SaaS PRODUCTS
              </h2>
