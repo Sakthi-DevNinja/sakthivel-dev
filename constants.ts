@@ -304,7 +304,7 @@ export const EXPERIENCE: ExperienceItem[] = [
 
 export const EDUCATION = [
   { degree: "Master of Computer Applications (MCA)", institution: "Anna University", period: "2021 – 2023" },
-  { degree: "Bachelor of Computer Applications (BCA)", institution: "Anna University", period: "2018 – 2021" },
+  { degree: "Bachelor of Computer Applications (BCA)", institution: "Periyar University", period: "2018 – 2021" },
   {degree: "Higher Secondary Certificate (HSC)", institution: "State Board", period: "2016 – 2018"}
 ];
 
