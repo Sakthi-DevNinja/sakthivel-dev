@@ -35,7 +35,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
     <div className="max-w-5xl mx-auto py-32 px-6">
       <button 
         onClick={onBack}
-        className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mono text-xs uppercase tracking-widest mb-16"
+        className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mono text-xs uppercase tracking-widest mb-12 mt-4"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -52,7 +52,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
         </div>
         <div className="flex-1">
           <div className="flex flex-wrap items-center gap-4 mb-4">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">{product.name}</h1>
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tighter">{product.name}</h1>
             <span className={`px-4 py-1.5 rounded-full text-[10px] mono uppercase tracking-[0.2em] border font-bold h-fit ${getStatusColor(product.status)}`}>
               {product.status}
             </span>
@@ -110,10 +110,10 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
 
           {/* Key Features */}
           <section>
-            <h2 className="mono text-[10px] uppercase tracking-[0.5em] text-blue-500 mb-10">System Architecture</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <h2 className="mono text-[10px] uppercase tracking-[0.5em] text-blue-500 mb-6">System Architecture</h2>
+            <div className="gap-6 flex flex-col items-start gap-4 group hover:border-blue-500/30 transition-all">
               {product.features.map((feature, i) => (
-                <div key={i} className="glass p-8 rounded-3xl flex items-start gap-4 group hover:border-blue-500/30 transition-all">
+                <div key={i} className="flex gap-6">
                   <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0 group-hover:animate-ping"></div>
                   <p className="text-neutral-300 leading-relaxed">{feature}</p>
                 </div>
@@ -208,7 +208,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
           onClick={() => setSelectedImage(null)}
         >
           <button 
-            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors"
+            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[100]"
             onClick={() => setSelectedImage(null)}
           >
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

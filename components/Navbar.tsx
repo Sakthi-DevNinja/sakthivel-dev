@@ -9,13 +9,59 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ scrolled, name, onHomeClick, onLabClick }) => {
+
+  
+const [activeSection, setActiveSection] = React.useState<string>('home');
+
+  React.useEffect(() => {
+    const sectionIds = [
+      'home',
+      'how-i-work',
+      'strengths',
+      'work',
+      'experience',
+      'product-lab',
+      'product-lab-detailed',
+      'contact'
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const pageId = entry.target.id;
+            
+            if (pageId === 'product-lab-detailed') {
+              setActiveSection('product-lab');
+            } else {
+              setActiveSection(pageId);
+            }
+
+          }
+        });
+      },
+      {
+        rootMargin: '-40% 0px -50% 0px', // sweet spot
+        threshold: 0
+      }
+    );
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+
   const links = [
-    { id: 'home', label: 'Home', action: onHomeClick },
+    { id: 'home', label: 'Home', href: '#home', action: onHomeClick },
     { id: 'how-i-work', label: 'Strategy', href: '#how-i-work' },
     { id: 'strengths', label: 'Impact', href: '#strengths' },
     { id: 'work', label: 'Work', href: '#work' },
     { id: 'experience', label: 'Matrix', href: '#experience' },
-    { id: 'product-lab', label: 'Product Lab', action: onLabClick }
+    { id: 'product-lab', label: 'Product Lab', href: '#product-lab', action: onLabClick }
   ];
   
   return (
@@ -23,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled, name, onHomeClick, onL
       <div className={`glass px-8 py-5 rounded-full flex items-center justify-between md:justify-center gap-8 lg:gap-12 shadow-2xl transition-all duration-500 ${scrolled ? 'bg-black/40 py-4 scale-95' : 'scale-100'}`}>
         <button onClick={onHomeClick} className="flex items-center gap-3 group">
           <div className="w-2 h-2 rounded-full bg-blue-500 group-hover:animate-ping"></div>
-          <span className="mono text-xs font-bold tracking-widest uppercase truncate">{name}</span>
+          <span className="mono text-lg font-bold tracking-widest uppercase truncate">{name}</span>
         </button>
         
         <div className="hidden lg:flex gap-8">
@@ -37,7 +83,8 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled, name, onHomeClick, onL
                   link.action();
                 }
               }}
-              className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 hover:text-blue-400 transition-all mono font-medium cursor-pointer whitespace-nowrap"
+              className={`text-[12px] font-bold uppercase tracking-[0.3em] mono font-medium cursor-pointer whitespace-nowrap transition-all 
+                ${activeSection === link.id? 'text-blue-400' : 'text-neutral-500 hover:text-blue-400'}`}
             >
               {link.label}
             </a>

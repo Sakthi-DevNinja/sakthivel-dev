@@ -5,12 +5,13 @@ import { SystemWork } from '../types';
 export const ProjectCard: React.FC<{ project: SystemWork }> = ({ project }) => {
   return (
     <div className="glass rounded-[2rem] p-8 md:p-12 glass-hover transition-all duration-500 flex flex-col h-full relative group">
-      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+      
       {/* Decorative Index */}
-      <span className="absolute top-8 right-10 mono text-[8px] text-neutral-700 group-hover:text-blue-500 transition-colors">SEC_DATA_{Math.random().toString(36).substr(2, 4).toUpperCase()}</span>
+      <span className="absolute top-6 right-6 mono text-[8px] text-neutral-700 group-hover:text-blue-500 transition-colors">SYS_ARCH_{Math.random().toString(36).substr(2, 4).toUpperCase()}</span>
       
       <header className="mb-10">
-        <h3 className="text-2xl md:text-3xl font-bold mb-3 group-hover:text-blue-400 transition-colors leading-tight">{project.name}</h3>
+        <h3 className="text-2xl md:text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors leading-tight">{project.name}</h3>
         {project.link && (
           <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-blue-500 text-xs mono uppercase tracking-widest hover:text-blue-400">
             Live Interface

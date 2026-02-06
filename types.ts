@@ -1,5 +1,6 @@
 
 export interface SystemWork {
+  id: string;
   name: string;
   objective?: string;
   overview?: string;

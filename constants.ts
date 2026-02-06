@@ -61,7 +61,6 @@ export const TECHNICAL_CAPABILITIES = [
     skills: [
       "Tailwind CSS",
       "Figma",
-      "Laravel",
       "Git and version control",
       "UI/UX best practices"
     ]
@@ -95,21 +94,32 @@ export const PRODUCTS: Product[] = [
 
   {
     id: "saporitos-platform",
-    name: "Saporitos Restaurant",
-    tagline: "Modern Dining Experience",
-    description: "A fully integrated website and menu management system for restaurant operations.",
-    problemStatement: "The restaurant lacked a dynamic way to sync their digital menu with the public website in real-time.",
-    solutionStatement: "Created a drag-and-drop CMS that updates the public site instantly through a unified database architecture.",
-    impactStatement: "Improved operational speed and provided a seamless ordering experience for diners.",
+    name: "Saporito’s Italian Restaurant & Pizzeria",
+    tagline: "A Responsive Website for Modern Dining",
+    description: "A responsive and user-friendly restaurant website built to showcase menu offerings, restaurant information, locations, and online ordering options for Saporito’s Italian Restaurant & Pizzeria.",
+    problemStatement: "The restaurant needed a clean and modern website to present its menu, special offers, and online ordering options clearly while ensuring a smooth experience across desktop and mobile devices.",
+    solutionStatement: "Designed and developed a responsive restaurant website with structured navigation, clear call-to-action for online ordering, and visually organized content to improve customer engagement and accessibility.",
+    impactStatement: "Enhanced the restaurant’s online presence, improved menu visibility, and enabled customers to easily explore offerings and place online orders from any device.",
     features: [
-      "Drag-and-drop menu management",
-      "Live website synchronization",
-      "Category-wise dynamic pricing",
-      "Interactive customer ordering flow",
-      "Image upload and processing for menu items"
+      "Responsive restaurant website for desktop and mobile",
+      "Menu display with categories and visual hierarchy",
+      "Online ordering (takeout and delivery) call-to-action flow",
+      "Special offers and promotional content sections",
+      "Restaurant information including location and contact details",
+      "SEO-friendly structure and content layout"
     ],
-    developerContribution: "Developed both the public-facing restaurant website and the internal menu management backend. Focused on creating a visually appealing and responsive user experience.",
-    techStack: ["PHP", "MySQL", "JavaScript", "jQuery", "CSS3"],
+    developerContribution: "Worked as a Full Stack Web Developer. Designed and developed the complete restaurant website, implemented menu and content sections, integrated online ordering navigation, and ensured responsive behavior and usability across devices.",
+    techStack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "jQuery Template",
+      "PHP",
+      "MySQL",
+      "Responsive Design"
+    ],
+    organization: "EssEmm Technologies",
     status: "Live",
     liveLink: "https://saporitosonline.com/",
     isConfidential: false,
@@ -121,57 +131,68 @@ export const PRODUCTS: Product[] = [
       "./products/saporitos/coupons.png",
       "./products/saporitos/about.png",
       "./products/saporitos/contact.png",
-      "./products/saporitos/seo.png",
+      "./products/saporitos/seo.png"
     ]
   },
-
   {
     id: "mirabella-app",
     name: "Mirabella Ministry",
-    tagline: "Connecting Global Communities",
-    description: "A centralized platform for ministry content, prayer requests, and community broadcasts.",
-    problemStatement: "The organization needed a reliable, algorithm-independent way to reach a global audience and manage requests.",
-    solutionStatement: "Developed a custom PWA featuring low-latency live broadcasts and a global submission architecture.",
-    impactStatement: "Increased global engagement and community visibility without reliance on third-party social media.",
+    tagline: "A Digital Platform for Global Faith & Community Outreach",
+    description: "A full-stack web application built to support Mirabella Ministry, enabling the sharing of spiritual content, prayer requests, events, broadcasts, and ministry resources for a global audience.",
+    problemStatement: "Mirabella Ministry required a centralized digital platform to manage spiritual content, community engagement, prayer requests, and event information without relying solely on social media platforms.",
+    solutionStatement: "Designed and developed a custom web application that allows the ministry to publish devotionals, broadcasts, events, and resources, while enabling users worldwide to submit prayer requests and engage with the ministry online.",
+    impactStatement: "Enabled Mirabella Ministry to strengthen global outreach, improve community engagement, and provide structured access to spiritual resources across devices.",
     features: [
-      "Global prayer request submission system",
-      "Live event broadcasts and media library",
-      "Interactive community engagement features",
-      "Responsive and intuitive navigation",
-      "Multi-device content delivery"
+      "Prayer request submission and management",
+      "Devotionals and spiritual content publishing",
+      "Event listings and ministry activity updates",
+      "Broadcast and media sharing pages",
+      "Testimonies and community engagement sections",
+      "Structured navigation for ministry resources",
+      "Responsive design for mobile and desktop"
     ],
-    developerContribution: "Acted as Project Owner and Lead Full Stack Developer. Built the platform from ground up, focusing on high availability and low-latency interaction for a global user base.",
-    techStack: ["PHP", "MySQL", "JavaScript", "HTML5", "Tailwind CSS"],
+    developerContribution: "Worked as Project Owner and Full Stack Web Developer. Designed the application architecture, developed backend and frontend features, implemented content and prayer request modules, and ensured responsive and user-friendly experiences across devices.",
+    techStack: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+    organization: "EssEmm Technologies",
     status: "Live",
     liveLink: "https://mirabellaapp.org/",
     isConfidential: false,
     gallery: [
-      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200"
+      "https://mirabellaapp.org/assets/images/home-preview.jpg"
     ]
   },
   {
     id: "service-execution-app",
-    name: "Service App",
-    tagline: "Field Service Optimization",
-    description: "Mobile-first solution for field technician scheduling and execution.",
-    problemStatement: "Field technicians lacked real-time access to records and struggled with instant documentation of expenses and closures.",
-    solutionStatement: "Engineered a mobile-first tracking system with OTP verification and offline-first data synchronization capabilities.",
-    impactStatement: "Reduced manual effort for field teams and improved verification accuracy for service closures.",
+    name: "Service Execution App",
+    tagline: "Mobile-First Field Service Management",
+    description: "A mobile-friendly service execution application built as an extension of the OIMS ERP system to support field engineers with real-time service tracking, reporting, and job execution.",
+    problemStatement: "Field engineers and service teams needed a reliable mobile solution to access service tickets, execute jobs in real time, track activities, record expenses, and close service requests with proper verification while working in the field.",
+    solutionStatement: "Designed and developed a mobile-first service application integrated with the OIMS ERP that enables technicians to manage service tickets, perform structured service execution, track locations, submit reports, log expenses, and securely close jobs using OTP-based verification.",
+    impactStatement: "Improved operational efficiency for field service teams by reducing manual paperwork, ensuring accurate service execution tracking, and enabling secure and verifiable service closures.",
     features: [
-      "Real-time technician scheduling and dispatch",
-      "Geo-location tracking for service verification",
-      "OTP-based secure service closure",
-      "Digital expense logging and approval",
-      "Offline-capable data sync"
+      "Mobile-responsive service dashboard with category-wise service counts",
+      "Card-based service ticket listing with detailed customer and job information",
+      "Tab-based service status filtering (Open, In-Progress, Closed)",
+      "Detailed service ticket view with service history and call logs",
+      "Technician scheduling and assignment",
+      "Structured service execution workflow with visit reports and file uploads",
+      "Mandatory technician checklists for service compliance",
+      "Geo-location tracking during job start and completion",
+      "Service log and timeline tracking",
+      "Multiple service closure methods including OTP-based verification",
+      "Customer feedback and rating capture on service closure",
+      "Expense tracking with document uploads for job-related costs"
     ],
-    developerContribution: "Designed the mobile-friendly UI and implemented the tracking and verification workflows. Optimized the API for performance on varying network conditions.",
-    techStack: ["React.js", "PHP API", "MySQL", "PWA"],
-    status: "In Production",
+    developerContribution: "Worked as UI/UX Developer and Full Stack Web Developer in the core engineering team. Designed mobile-first user interfaces, implemented service execution workflows, integrated geo-location and OTP-based verification, and developed expense tracking and service closure modules.",
+    techStack: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"],
+    organization: "EssEmm Technologies",
+    status: "Live",
     isConfidential: true,
     gallery: [
-      "https://images.unsplash.com/photo-1512428559083-a40ce44d8d06?auto=format&fit=crop&q=80&w=1200"
+      "confidential"
     ]
-  },
+  }
+
 ];
 
 export const SYSTEMS: SystemWork[] = [
@@ -303,9 +324,30 @@ export const EXPERIENCE: ExperienceItem[] = [
 ];
 
 export const EDUCATION = [
-  { degree: "Master of Computer Applications (MCA)", institution: "Anna University", period: "2021 – 2023" },
-  { degree: "Bachelor of Computer Applications (BCA)", institution: "Periyar University", period: "2018 – 2021" },
-  {degree: "Higher Secondary Certificate (HSC)", institution: "State Board", period: "2016 – 2018"}
+  { 
+    degree: "Master of Computer Applications (MCA)", 
+    university: "Anna University",
+    institution: "Hindusthan College of Engineering & Technology", 
+    city: "Coimbatore", 
+    period: "2021 – 2023",
+    percentage: "78%" 
+  },
+  { 
+    degree: "Bachelor of Computer Applications (BCA)", 
+    university: "Periyar University",
+    institution: "Government Arts College",
+    city: "Dharmapuri", 
+    period: "2018 – 2021",
+    percentage: "79%" 
+  },
+  // {
+  //   degree: "Higher Secondary Certificate (HSC)", 
+  //   university: "State Board",
+  //   institution: "",
+  //   city: "", 
+  //   period: "2016 – 2018",
+  //   percentage: "89%"
+  // }
 ];
 
 export const AVAILABILITY = "I am actively open to Junior to Mid-level Full Stack or Web Developer roles, especially in ERP, SaaS, or product-based teams.";
