@@ -197,6 +197,7 @@ export const PRODUCTS: Product[] = [
 
 export const SYSTEMS: SystemWork[] = [
   {
+    id: "reports module",
     name: "Custom ERP Dashboards & Reports Module",
     objective: "Provide actionable business insights and improve presales visibility within OIMS ERP.",
     role: "UI/UX Developer (Full Stack Web Developer)",
@@ -205,6 +206,7 @@ export const SYSTEMS: SystemWork[] = [
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
   },
   {
+    id: "presales dashboard",
     name: "Presales Kanban & Workflow Controller",
     objective: "Visualize and manage presales progression across multiple workflow stages.",
     role: "UI/UX Developer (Full Stack Web Developer)",
@@ -213,6 +215,7 @@ export const SYSTEMS: SystemWork[] = [
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
   },
   {
+    id: "oims azee",
     name: "OIMS AZEE – Ticket Raising Module",
     objective: "Standardize and simplify internal and customer support ticket creation within ERP.",
     role: "UI/UX Developer (Full Stack Web Developer)",
@@ -221,6 +224,7 @@ export const SYSTEMS: SystemWork[] = [
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
   },
   {
+    id: "ticket analyzer",
     name: "OIMS Ticket Analyzer",
     objective: "Centralize ticket analysis, communication history, and workflow visibility.",
     role: "UI/UX Developer (Full Stack Web Developer)",
@@ -229,6 +233,7 @@ export const SYSTEMS: SystemWork[] = [
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
   },
   {
+    id: "time analyzer",
     name: "OIMS Time Analyzer (Activity & Effort Tracking)",
     objective: "Track, analyze, and report engineer time across tickets, services, and projects.",
     role: "UI/UX Developer (Full Stack Web Developer)",
@@ -237,6 +242,7 @@ export const SYSTEMS: SystemWork[] = [
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
   },
   {
+    id: "oims fbo",
     name: "OIMS FBO – Menu Management System",
     objective: "Modernize restaurant menu management while preserving existing workflows.",
     role: "UI/UX Developer (Full Stack Web Developer)",
@@ -245,6 +251,7 @@ export const SYSTEMS: SystemWork[] = [
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS"]
   },
   {
+    id: "service app",
     name: "Service App (Mobile-Friendly ERP Extension)",
     objective: "Enable field engineers to manage service execution, tracking, and reporting on mobile devices.",
     role: "UI/UX Developer (Full Stack Web Developer)",
@@ -253,6 +260,7 @@ export const SYSTEMS: SystemWork[] = [
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
   },
   {
+    id: "contact verification",
     name: "OIMS Contact Verification System",
     objective: "Ensure secure and accurate customer and supplier data verification within ERP.",
     role: "UI/UX Developer (Full Stack Web Developer)",
@@ -261,6 +269,7 @@ export const SYSTEMS: SystemWork[] = [
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
   },
   {
+    id: "telecalling dashboard",
     name: "Telecalling Dashboard (Presales Module)",
     objective: "Centralize and manage presales telecalling activities within the ERP system.",
     role: "UI/UX Developer (Full Stack Web Developer)",
@@ -269,6 +278,7 @@ export const SYSTEMS: SystemWork[] = [
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
   },
   {
+    id: "contract dashboard",
     name: "Contract & Service Management Dashboard",
     objective: "Enhance contract management by integrating service and AMC tracking into a unified ERP view.",
     role: "UI/UX Developer (Full Stack Web Developer)",

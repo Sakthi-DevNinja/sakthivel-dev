@@ -27,6 +27,7 @@ export interface Product {
   developerContribution: string;
   techStack: string[];
   status: 'Live' | 'In Production' | 'Internal Tool' | 'MVP / In Progress';
+  organization: string;
   liveLink?: string;
   githubLink?: string;
   isConfidential: boolean;
