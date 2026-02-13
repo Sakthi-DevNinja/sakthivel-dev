@@ -358,7 +358,11 @@ const App: React.FC = () => {
 
             <div className="flex justify-center mt-16">
               <button
-                onClick={() => setExpanded(e => !e)}
+                onClick={() => {
+                  setExpanded(e => !e);
+                  if(expanded) {window.location.hash = '#work';}
+                }}
+
                 className="mono text-xs uppercase tracking-[0.4em]
                           px-10 py-4 rounded-full
                           border border-white/10
