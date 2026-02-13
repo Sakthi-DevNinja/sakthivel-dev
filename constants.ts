@@ -158,7 +158,10 @@ export const PRODUCTS: Product[] = [
     liveLink: "https://mirabellaapp.org/",
     isConfidential: false,
     gallery: [
-      "https://mirabellaapp.org/assets/images/home-preview.jpg"
+      "./products/mirabella/mockup.png",
+      "./products/mirabella/opening page.png",
+      "./products/mirabella/desktop mockup.png",
+      // "./products/mirabella/Mirabella App.pdf",
     ]
   },
   {

@@ -86,7 +86,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
           {/* Problem Solution Impact Section */}
           <section className="space-y-12">
             <div className="flex items-center gap-4 mb-8">
-              <h2 className="mono text-[10px] uppercase tracking-[0.5em] text-blue-500">Problem · Solution · Impact</h2>
+              <h2 className="mono text-[10px] uppercase tracking-[0.25em] text-blue-500">Problem · Solution · Impact</h2>
               <div className="h-px flex-1 bg-white/5"></div>
             </div>
             
@@ -110,7 +110,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
 
           {/* Key Features */}
           <section>
-            <h2 className="mono text-[10px] uppercase tracking-[0.5em] text-blue-500 mb-6">System Architecture</h2>
+            <h2 className="mono text-[10px] uppercase tracking-[0.25em] text-blue-500 mb-6">System Architecture</h2>
             <div className="gap-6 flex flex-col items-start gap-4 group hover:border-blue-500/30 transition-all">
               {product.features.map((feature, i) => (
                 <div key={i} className="flex gap-6">
@@ -124,7 +124,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
           {/* Image Gallery Feature */}
           {product.gallery && product.gallery.length > 0 && (
             <section>
-              <h2 className="mono text-[10px] uppercase tracking-[0.5em] text-blue-500 mb-10">System Visualization</h2>
+              <h2 className="mono text-[10px] uppercase tracking-[0.25em] text-blue-500 mb-10">System Visualization</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {product.gallery.map((img, i) => (
                   <div 
@@ -161,7 +161,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
 
           {/* Developer Contribution */}
           <section>
-            <h2 className="mono text-[10px] uppercase tracking-[0.5em] text-blue-500 mb-8">Role & Impact</h2>
+            <h2 className="mono text-[10px] uppercase tracking-[0.25em] text-blue-500 mb-8">Role & Impact</h2>
             <div className="glass p-10 rounded-[2.5rem] border-blue-500/10 italic text-lg font-light leading-relaxed text-neutral-300">
               {product.developerContribution}
             </div>
@@ -171,7 +171,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
         {/* Sidebar */}
         <div className="space-y-12">
           <section>
-            <h2 className="mono text-[10px] uppercase tracking-[0.5em] text-blue-500 mb-6">Tech Stack</h2>
+            <h2 className="mono text-[10px] uppercase tracking-[0.25em] text-blue-500 mb-6">Tech Stack</h2>
             <div className="flex flex-wrap gap-3">
               {product.techStack.map(tech => (
                 <span key={tech} className="px-4 py-2 glass rounded-full text-xs mono text-neutral-400 border-white/5">{tech}</span>
@@ -180,7 +180,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
           </section>
 
           <section>
-            <h2 className="mono text-[10px] uppercase tracking-[0.5em] text-blue-500 mb-6">Classification</h2>
+            <h2 className="mono text-[10px] uppercase tracking-[0.25em] text-blue-500 mb-6">Classification</h2>
             <div className="glass p-6 rounded-2xl border-blue-500/20 bg-blue-500/5">
               <div className="flex items-center gap-4 text-sm mono text-neutral-300">
                 <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>

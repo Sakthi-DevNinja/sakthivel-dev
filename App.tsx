@@ -120,7 +120,7 @@ const App: React.FC = () => {
           <Navbar scrolled={scrolled} name={PERSON_NAME} onHomeClick={handleHomeClick} onLabClick={handleLabClick} />
           <main className="max-w-6xl mx-auto py-40 px-6 flex-grow">
             <div className="text-center mb-24">
-              <h2 className="mono text-blue-500 text-sm uppercase tracking-[0.5em] mb-8">The Product Lab</h2>
+              <h2 className="mono text-blue-500 text-sm uppercase tracking-[0.25em] mb-8">The Product Lab</h2>
               <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-gradient leading-tight mb-8">
                 System Catalog
               </h1>
@@ -181,7 +181,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-16">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono">01 / Perspective</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">01 / Perspective</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
             
@@ -218,7 +218,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-12">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono">02 / Operational Strategy</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">02 / Operational Strategy</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
             <div className="glass p-8 md:p-14 rounded-[2.5rem] border-blue-500/10 relative overflow-hidden">
@@ -238,7 +238,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-12">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono">03 / System & Architecture Thinking</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">03 / System & Architecture Thinking</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
             <div className="glass p-8 md:p-14 rounded-[2.5rem] border-blue-500/10 bg-white/[0.01] relative overflow-hidden">
@@ -257,7 +257,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-16">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono"> 04 / Technical Capabilities</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono"> 04 / Technical Capabilities</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
             <TechnicalCapabilities />
@@ -270,7 +270,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-16">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono">05 / Core Impact Matrix</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">05 / Core Impact Matrix</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -289,7 +289,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-12">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono">06 / Building Internal Tools That Matter</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">06 / Building Internal Tools That Matter</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
             <div className="glass p-8 md:p-14 rounded-[2.5rem] border-blue-500/10 border-dashed">
@@ -305,7 +305,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
              <div className="flex items-center gap-6 mb-16">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono">07 / Product Lab Hub</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">07 / Product Lab Hub</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
             
@@ -332,7 +332,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-12">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono">08 / Architecture Selected</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">08 / Architecture Selected</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
 
@@ -378,7 +378,7 @@ const App: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-6 mb-20">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono">09 / Career Matrix</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">09 / Career Matrix</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
             
@@ -395,7 +395,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-16">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
-              <h2 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono">10 / Academic Foundation</h2>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">10 / Academic Foundation</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
             </div>
 
@@ -416,7 +416,7 @@ const App: React.FC = () => {
         <section id="contact" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16 text-center">
-              <h3 className="text-xs md:text-lg uppercase tracking-[0.5em] text-blue-500 mono mb-8 font-bold">11 / Protocol: Handshake</h3>
+              <h3 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono mb-8 font-bold">11 / Protocol: Handshake</h3>
               <p className="text-xl md:text-2xl text-neutral-300 font-light max-w-2xl mx-auto leading-relaxed border-b border-white/5 pb-12 italic text-center">
                 {AVAILABILITY}
               </p>
@@ -453,7 +453,7 @@ const Footer: React.FC = () => (
 
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
       <div className="flex flex-col gap-2 text-left">
-        <p className="mono text-[10px] md:text-[11px] uppercase tracking-[0.25em] md:tracking-[0.5em] text-neutral-700">
+        <p className="mono text-[10px] md:text-[11px] uppercase tracking-[0.25em] md:tracking-[0.25em] text-neutral-700">
           SAKTHIVEL S // FULL STACK WEB DEVELOPER 
         </p>
         <p className="mono text-[10px] tracking-[0.3em] text-neutral-800 uppercase text-center md:text-left
