@@ -1,7 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-(https://iamsakthi.netlify.app/owner/profile_banner.svg)
-
 # 🚀 Project Name
 
 A modern web application built with a clean architecture, focused on scalability, performance, and long-term maintainability.  
