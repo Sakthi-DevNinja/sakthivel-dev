@@ -36,7 +36,6 @@ const [activeSection, setActiveSection] = React.useState<string>('home');
             } else {
               setActiveSection(pageId);
             }
-
           }
         });
       },

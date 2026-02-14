@@ -3,6 +3,7 @@ import React from 'react';
 import { TECHNICAL_CAPABILITIES } from '../constants';
 
 const TechnicalCapabilities: React.FC = () => {
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {TECHNICAL_CAPABILITIES.map((cap) => (

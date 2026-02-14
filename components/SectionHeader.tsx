@@ -10,3 +10,4 @@ export const SectionHeader: React.FC<{title: string}> = ({ title }) => {
     </div>
   );
 };
+

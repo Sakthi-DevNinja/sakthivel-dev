@@ -97,6 +97,7 @@ const App: React.FC = () => {
     }
   };
 
+
   const handleLabClick = () => {
     // Google Analytics event
     if (window.gtag) {
@@ -202,6 +203,7 @@ const App: React.FC = () => {
                {/* Glow Effect - left bottom */}
                {/* <div className="absolute left-[0rem] bottom-[0rem] -translate-x-1/2 translate-y-1/2 w-[50rem] h-[50rem] rounded-full bg-blue-800/20 blur-[140px] z-0"></div> */}
                {/* Glow Effect - right top */}
+            
                <div className="absolute right-[0rem] top-[0rem] translate-x-1/2 -translate-y-1/2 w-[20rem] h-[20rem] rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
 
                <div className="w-24 h-24 md:w-40 md:h-40 rounded-[2rem] overflow-hidden border-2 border-blue-500/20 shrink-0 shadow-2xl relative group bg-black">

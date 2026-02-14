@@ -11,6 +11,7 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ className }) => {
   return (
     <div className={`flex gap-4 ${className}`}>
       
+      
       {/* WhatsApp */}
       <a href="https://wa.me/919585909130?text=Hi%20Sakthivel,%20I%20visited%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer" className={baseStyle}>
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5">

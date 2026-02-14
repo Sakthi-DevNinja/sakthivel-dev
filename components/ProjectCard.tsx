@@ -65,6 +65,7 @@ export const ProjectCard: React.FC<{ project: SystemWork }> = ({ project }) => {
           </div>
         )}
 
+
         {project.impact && (
           <div className="bg-blue-500/5 p-4 rounded-xl border border-blue-500/10">
             <span className="mono text-[9px] uppercase tracking-[0.3em] text-blue-400 block mb-1">Impact</span>

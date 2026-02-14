@@ -16,6 +16,7 @@ export const ExperienceSection: React.FC<{ experience: ExperienceItem }> = ({ ex
         </div>
       </header>
 
+
       <div className="space-y-20">
         {experience.roles.map((role, rIdx) => (
           <div key={rIdx} className="relative group">

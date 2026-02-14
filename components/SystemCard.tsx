@@ -14,6 +14,7 @@ export const SystemCard: React.FC<SystemCardProps> = ({ system }) => {
         <div className="text-neutral-800 mono text-[10px] uppercase tracking-widest select-none">System Visualization Restricted</div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#030303] to-transparent opacity-80"></div>
         <div className="absolute bottom-6 left-6 flex gap-2">
+          
           {/* Fix: Added optional chaining for 'tags' property which is optional in SystemWork. */}
           {system.tags?.map(tag => (
             <span key={tag} className="text-[9px] mono uppercase tracking-widest bg-white/10 backdrop-blur-md border border-white/5 px-3 py-1 rounded-full text-white/70">
