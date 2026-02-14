@@ -23,6 +23,8 @@ import {
 } from './constants';
 import { Product } from './types';
 
+import { SocialMedia } from "./components/SocialMedia";
+
 type ViewState = 'HOME' | 'PRODUCT_LAB' | 'PRODUCT_DETAIL';
 
 const PROFILE_IMAGE = "./owner/sakthi.webp";
@@ -181,7 +183,9 @@ const App: React.FC = () => {
 
               <p className="text-[#9d9d9d] text-[0.6rem] font-bold tracking-[0.1em] md:tracking-[0.2em] mt-2 text-md md:text-[1rem]">3 Years | PHP, MySQL, JavaScript, jQuery, React, HTML, CSS</p>    
 
-          </div>
+              <SocialMedia className="justify-center mt-8" />
+
+         </div>
         </section>
 
         {/* 01 / Perspective Section */}
