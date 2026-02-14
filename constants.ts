@@ -124,14 +124,14 @@ export const PRODUCTS: Product[] = [
     liveLink: "https://saporitosonline.com/",
     isConfidential: false,
     gallery: [
-      "./products/saporitos/home.png",
-      "./products/saporitos/menu.png",
-      "./products/saporitos/catering.png",
-      "./products/saporitos/daily.png",
-      "./products/saporitos/coupons.png",
-      "./products/saporitos/about.png",
-      "./products/saporitos/contact.png",
-      "./products/saporitos/seo.png"
+      "./products/saporitos/home.webp",
+      "./products/saporitos/menu.webp",
+      "./products/saporitos/catering.webp",
+      "./products/saporitos/daily.webp",
+      "./products/saporitos/coupons.webp",
+      "./products/saporitos/about.webp",
+      "./products/saporitos/contact.webp",
+      "./products/saporitos/seo.webp"
     ]
   },
   {
@@ -158,10 +158,9 @@ export const PRODUCTS: Product[] = [
     liveLink: "https://mirabellaapp.org/",
     isConfidential: false,
     gallery: [
-      "./products/mirabella/mockup.png",
-      "./products/mirabella/opening page.png",
-      "./products/mirabella/desktop mockup.png",
-      // "./products/mirabella/Mirabella App.pdf",
+      "./products/mirabella/mockup.webp",
+      "./products/mirabella/opening page.webp",
+      "./products/mirabella/desktop mockup.webp"
     ]
   },
   {

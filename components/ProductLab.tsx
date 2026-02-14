@@ -12,10 +12,20 @@ export const ProductLab: React.FC<ProductLabProps> = ({ products, onSelectProduc
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {products.map((product) => (
         <div 
-          key={product.id}
-          onClick={() => onSelectProduct(product)}
-          className="glass p-8 rounded-[2rem] glass-hover cursor-pointer transition-all duration-500 group relative flex flex-col h-full"
-        >
+            key={product.id}
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag('event', 'product_card_click', {
+                  event_category: 'engagement',
+                  event_label: product.name || product.id,
+                  value: 1
+                });
+              }
+
+              onSelectProduct(product);
+            }}
+            className="glass p-8 rounded-[2rem] glass-hover cursor-pointer transition-all duration-500 group relative flex flex-col h-full"
+          >
           <div className="flex justify-between items-start mb-6">
             <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-500/20 transition-all">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="1.5">

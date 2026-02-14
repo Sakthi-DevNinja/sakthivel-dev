@@ -25,8 +25,8 @@ import { Product } from './types';
 
 type ViewState = 'HOME' | 'PRODUCT_LAB' | 'PRODUCT_DETAIL';
 
-const PROFILE_IMAGE = "./owner/sakthi.png";
-const ABOUT_IMAGE = "./owner/about-sakthi.png";
+const PROFILE_IMAGE = "./owner/sakthi.webp";
+const ABOUT_IMAGE = "./owner/about-sakthi.webp";
 
 // For Project load count
 const INITIAL_COUNT = 4;
@@ -96,6 +96,14 @@ const App: React.FC = () => {
   };
 
   const handleLabClick = () => {
+    // Google Analytics event
+    if (window.gtag) {
+      window.gtag('event', 'product_lab_access', {
+        event_category: 'engagement',
+        event_label: 'Access Product Lab Button',
+        value: 1
+      });
+    }
     window.location.hash = '#product-lab';
   };
 
@@ -203,11 +211,36 @@ const App: React.FC = () => {
 
                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/5 filter blur-[100px] rounded-full pointer-events-none"></div>
                <div className="prose prose-invert max-w-none flex-1">
-                 {ABOUT_TEXT.split('\n\n').map((paragraph, idx) => (
+                  {ABOUT_TEXT.split('\n\n').map((paragraph, idx) => (
                    <p key={idx} className="text-lg md:text-xl font-light leading-relaxed text-neutral-300 mb-6 last:mb-0">
                      {paragraph}
                    </p>
-                 ))}
+                  ))}
+                 
+                  <div className="flex justify-start mt-10">
+                    <a
+                      href="./owner/Sakthivel-full_stack_web_developer.pdf"
+                      download="Sakthivel-CV.pdf"
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag('event', 'download_cv', {
+                            event_category: 'engagement',
+                            event_label: 'CV Download Button',
+                            value: 1
+                          });
+                        }
+                      }}
+                      className="mono text-xs uppercase tracking-[0.4em]
+                                px-10 py-4 rounded-full
+                                border border-white/10
+                                text-neutral-400 hover:text-blue-400
+                                hover:border-blue-500/40
+                                transition-all inline-block"
+                    >
+                      Grab My Resume
+                    </a>
+                  </div>
+
                </div>
             </div>
           </div>
@@ -223,7 +256,6 @@ const App: React.FC = () => {
             </div>
             <div className="glass p-8 md:p-14 rounded-[2.5rem] border-blue-500/10 relative overflow-hidden">
                  <div className="absolute left-[0rem] top-[0rem] -translate-x-1/2 -translate-y-1/2 w-[20rem] h-[20rem] rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
-
                 {HOW_I_WORK.map((howIWork, idx) => (
                   <p key={idx} className="text-lg md:text-xl font-light leading-relaxed text-neutral-300 mb-6 last:mb-0 relative" >
                     {howIWork}
@@ -419,8 +451,14 @@ const App: React.FC = () => {
         {/* 11 / Connectivity (Contact) */}
         <section id="contact" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
+
+            <div className="flex items-center gap-6 mb-16">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">11 / Protocol: Handshake</h2>
+              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+            </div>
+
             <div className="mb-16 text-center">
-              <h3 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono mb-8 font-bold">11 / Protocol: Handshake</h3>
               <p className="text-xl md:text-2xl text-neutral-300 font-light max-w-2xl mx-auto leading-relaxed border-b border-white/5 pb-12 italic text-center">
                 {AVAILABILITY}
               </p>
@@ -433,10 +471,28 @@ const App: React.FC = () => {
                 Ready to architect reliable software systems. Let's build something that scales.
               </p>
               <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-                <a href="mailto:vel8679@gmail.com" className="px-14 py-6 bg-white text-black font-bold rounded-full hover:scale-105 transition-all w-full md:w-auto text-center shadow-xl">
+                <a href="mailto:vel8679@gmail.com" className="px-14 py-6 bg-white text-black font-bold rounded-full hover:scale-105 transition-all w-full md:w-auto text-center shadow-xl"
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'contact_email_click', {
+                        event_category: 'contact',
+                        event_label: 'Primary Mailbox Button'
+                      });
+                    }
+                  }}
+                >
                   Primary Mailbox
                 </a>
-                <a href="https://linkedin.com/in/sakthivel-dev" target="_blank" rel="noopener noreferrer" className="px-14 py-6 glass rounded-full hover:bg-white/10 transition-colors w-full md:w-auto font-semibold text-center tracking-wide">
+                <a href="https://linkedin.com/in/sakthivel-dev" target="_blank" rel="noopener noreferrer" className="px-14 py-6 glass rounded-full hover:bg-white/10 transition-colors w-full md:w-auto font-semibold text-center tracking-wide"
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'linkedin_profile_click', {
+                        event_category: 'contact',
+                        event_label: 'LinkedIn Network Button'
+                      });
+                    }
+                  }}
+                >
                   LinkedIn Network
                 </a>
               </div>
