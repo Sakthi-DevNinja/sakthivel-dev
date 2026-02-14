@@ -471,27 +471,9 @@ const App: React.FC = () => {
                 Ready to architect reliable software systems. Let's build something that scales.
               </p>
               <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-                <a
-                  href="mailto:vel8679@gmail.com"
-                  onClick={(e) => {
-                    e.preventDefault();
-
-                    if (window.gtag) {
-                      window.gtag('event', 'contact_email_click', {
-                        event_category: 'contact',
-                        event_label: 'Primary Mailbox Button'
-                      });
-                    }
-                    // Delay opening mail slightly to allow GA to send event
-                    setTimeout(() => {
-                      window.location.href = "mailto:vel8679@gmail.com";
-                    }, 300);
-                  }}
-                  className="px-14 py-6 bg-white text-black font-bold rounded-full hover:scale-105 transition-all w-full md:w-auto text-center shadow-xl"
-                >
+                <a href="mailto:vel8679@gmail.com" className="px-14 py-6 bg-white text-black font-bold rounded-full hover:scale-105 transition-all w-full md:w-auto text-center shadow-xl">
                   Primary Mailbox
                 </a>
-
                 <a href="https://linkedin.com/in/sakthivel-dev" target="_blank" rel="noopener noreferrer" className="px-14 py-6 glass rounded-full hover:bg-white/10 transition-colors w-full md:w-auto font-semibold text-center tracking-wide"
                   onClick={() => {
                     if (window.gtag) {
