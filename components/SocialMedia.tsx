@@ -21,7 +21,7 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ className }) => {
       </a>
 
       {/* Instagram */}
-      <a href="https://www.instagram.com/sakthi_dev18" target="_blank" rel="noreferrer" className={baseStyle}>
+      <a href="https://www.instagram.com/sakthi_dev18?igsh=OHM1b256OTBzanVu" target="_blank" rel="noreferrer" className={baseStyle}>
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5">
           <rect x="2" y="2" width="20" height="20" rx="5" />
           <circle cx="12" cy="12" r="4" />
@@ -39,7 +39,7 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ className }) => {
       </a>
 
       {/* GitHub */}
-      <a href="https://github.com/Sakthi-DevNinja" target="_blank" rel="noreferrer" className={baseStyle}>
+      <a href="https://github.com/Sakthi-DevNinja" target="_blank" rel="noreferrer" className={baseStyle} hidden>
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M12 2a10 10 0 00-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34a2.65 2.65 0 00-1.11-1.46c-.9-.62.07-.6.07-.6a2.1 2.1 0 011.53 1.03 2.13 2.13 0 002.9.83 2.13 2.13 0 01.63-1.34c-2.22-.25-4.55-1.11-4.55-4.95a3.87 3.87 0 011.03-2.69 3.6 3.6 0 01.1-2.65s.84-.27 2.75 1.02a9.5 9.5 0 015 0c1.9-1.29 2.74-1.02 2.74-1.02a3.6 3.6 0 01.1 2.65 3.87 3.87 0 011.02 2.69c0 3.85-2.34 4.7-4.57 4.94a2.38 2.38 0 01.67 1.85v2.75c0 .27.18.58.69.48A10 10 0 0012 2z"/>
         </svg>
