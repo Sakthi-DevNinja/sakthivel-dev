@@ -21,7 +21,7 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ className }) => {
       </a>
 
       {/* Instagram */}
-      <a href="https://www.instagram.com/sakthi_dev18?igsh=OHM1b256OTBzanVu" target="_blank" rel="noreferrer" className={baseStyle}>
+      <a href="https://www.instagram.com/i_am_sakthi_dev?igsh=OHM1b256OTBzanVu" target="_blank" rel="noreferrer" className={baseStyle}>
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5">
           <rect x="2" y="2" width="20" height="20" rx="5" />
           <circle cx="12" cy="12" r="4" />
