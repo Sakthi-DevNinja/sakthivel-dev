@@ -9,13 +9,12 @@ export const ExperienceSection: React.FC<{ experience: ExperienceItem }> = ({ ex
       
       <header className="mb-12">
         <h3 className="text-3xl font-bold mb-2 tracking-tight">{experience.company}</h3>
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm mono text-neutral-500 uppercase tracking-widest">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm mono text-[#9d9d9d] uppercase tracking-widest">
           <span>{experience.location}</span>
           <span className="text-blue-500/50">|</span>
           <span>{experience.department}</span>
         </div>
       </header>
-
 
       <div className="space-y-20">
         {experience.roles.map((role, rIdx) => (
@@ -36,7 +35,7 @@ export const ExperienceSection: React.FC<{ experience: ExperienceItem }> = ({ ex
             <div className="space-y-10">
               {role.highlights && (
                 <div>
-                  <h5 className="mono text-[10px] uppercase tracking-widest text-neutral-500 mb-4 flex items-center gap-4">
+                  <h5 className="mono text-[10px] uppercase tracking-widest text-[#9d9d9d] mb-4 flex items-center gap-4">
                     Key Execution Points
                     <span className="h-px flex-1 bg-white/5"></span>
                   </h5>
@@ -53,13 +52,13 @@ export const ExperienceSection: React.FC<{ experience: ExperienceItem }> = ({ ex
 
               {role.details && (
                 <div>
-                  <h5 className="mono text-[10px] uppercase tracking-widest text-neutral-500 mb-6 flex items-center gap-4">
+                  <h5 className="mono text-[10px] uppercase tracking-widest text-[#9d9d9d] mb-6 flex items-center gap-4">
                     Domain Contributions & Modular Outputs
                     <span className="h-px flex-1 bg-white/5"></span>
                   </h5>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {role.details.map((detail, i) => (
-                      <div key={i} className="glass p-4 rounded-xl text-xs text-neutral-500 mono border-white/5 hover:border-blue-500/20 transition-all flex items-center gap-3">
+                      <div key={i} className="glass p-4 rounded-xl text-xs text-[#9d9d9d] mono border-white/5 hover:border-blue-500/20 transition-all flex items-center gap-3">
                         <div className="w-1 h-1 bg-blue-500/40 rounded-full"></div>
                         {detail}
                       </div>

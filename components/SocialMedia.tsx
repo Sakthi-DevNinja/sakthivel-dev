@@ -13,7 +13,7 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ className }) => {
       
       
       {/* WhatsApp */}
-      <a href="https://wa.me/919585909130?text=Hi%20Sakthivel,%20I%20visited%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noreferrer" className={baseStyle}>
+      <a href="https://wa.me/919585909130?text=Hi%20Sakthivel,%20I%20visited%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" aria-label="Lets chat!" rel="noreferrer" className={baseStyle}>
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M21 12a9 9 0 01-13.5 7.8L3 21l1.2-4.5A9 9 0 1121 12z" />
           <path d="M8.5 9.5c.5-1 1-1 1.5-1 .3 0 .6 0 .8.4l.7 1c.2.3.2.6 0 .9l-.4.6c-.1.2-.1.4 0 .6.4.7 1 1.3 1.7 1.7.2.1.4.1.6 0l.6-.4c.3-.2.6-.2.9 0l1 .7c.4.2.4.5.4.8 0 .5 0 1-.9 1.5-.7.4-1.5.5-2.4.2-2.6-.9-4.7-3-5.6-5.6-.3-.9-.2-1.7.2-2.4z" />
@@ -21,7 +21,7 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ className }) => {
       </a>
 
       {/* Instagram */}
-      <a href="https://www.instagram.com/i_am_sakthi_dev?igsh=OHM1b256OTBzanVu" target="_blank" rel="noreferrer" className={baseStyle}>
+      <a href="https://www.instagram.com/i_am_sakthi_dev?igsh=OHM1b256OTBzanVu" aria-label="View My Instagram Profile" target="_blank" rel="noreferrer" className={baseStyle}>
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5">
           <rect x="2" y="2" width="20" height="20" rx="5" />
           <circle cx="12" cy="12" r="4" />
@@ -30,7 +30,7 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ className }) => {
       </a>
 
       {/* LinkedIn */}
-      <a href="https://www.linkedin.com/in/sakthivel-dev" target="_blank" rel="noreferrer" className={baseStyle}>
+      <a href="https://www.linkedin.com/in/sakthivel-dev" target="_blank" rel="noreferrer" aria-label="Lets Connect with linkedin" className={baseStyle}>
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5">
           <rect x="2" y="9" width="4" height="12" />
           <circle cx="4" cy="4" r="2" />

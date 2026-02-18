@@ -83,7 +83,7 @@ const [activeSection, setActiveSection] = React.useState<string>('home');
                 }
               }}
               className={`text-[12px] font-bold uppercase tracking-[0.3em] mono font-medium cursor-pointer whitespace-nowrap transition-all 
-                ${activeSection === link.id? 'text-blue-400' : 'text-neutral-500 hover:text-blue-400'}`}
+                ${activeSection === link.id? 'text-blue-400' : 'text-[#9d9d9d] hover:text-blue-400'}`}
             >
               {link.label}
             </a>

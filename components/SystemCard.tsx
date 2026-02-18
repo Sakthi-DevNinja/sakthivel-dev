@@ -27,7 +27,7 @@ export const SystemCard: React.FC<SystemCardProps> = ({ system }) => {
       <div className="p-8 flex-1 flex flex-col">
         <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">{system.name}</h3>
         {/* Fix: Property 'context' does not exist on type 'SystemWork'. Replaced with 'overview' or 'objective'. */}
-        <p className="text-sm text-neutral-500 mb-6 font-light">{system.overview || system.objective}</p>
+        <p className="text-sm text-[#9d9d9d] mb-6 font-light">{system.overview || system.objective}</p>
         
         <div className="space-y-4 mb-8">
           <div>

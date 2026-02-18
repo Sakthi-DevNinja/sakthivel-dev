@@ -76,7 +76,7 @@ export const ProjectCard: React.FC<{ project: SystemWork }> = ({ project }) => {
 
       <footer className="mt-12 pt-8 border-t border-white/5 flex flex-wrap gap-2">
         {project.technologies?.map(tech => (
-          <span key={tech} className="px-3 py-1 bg-white/5 rounded-md text-[10px] mono text-neutral-500 border border-white/5">{tech}</span>
+          <span key={tech} className="px-3 py-1 bg-white/5 rounded-md text-[10px] mono text-[#9d9d9d] border border-white/5">{tech}</span>
         ))}
         {project.note && (
           <p className="w-full mt-4 text-[10px] text-neutral-600 italic mono leading-relaxed">

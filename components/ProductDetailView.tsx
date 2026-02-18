@@ -35,7 +35,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
     <div className="max-w-5xl mx-auto py-32 px-6">
       <button 
         onClick={onBack}
-        className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mono text-xs uppercase tracking-widest mb-12 mt-4"
+        className="flex items-center gap-2 text-[#9d9d9d] hover:text-white transition-colors mono text-xs uppercase tracking-widest mb-12 mt-4"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -112,7 +112,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
             
             <div className="grid grid-cols-1 gap-10">
               <div className="space-y-2">
-                <span className="mono text-[9px] uppercase tracking-[0.3em] text-neutral-500">The Problem</span>
+                <span className="mono text-[9px] uppercase tracking-[0.3em] text-[#9d9d9d]">The Problem</span>
                 <p className="text-lg text-neutral-300 font-light leading-relaxed">{product.problemStatement}</p>
               </div>
               
@@ -214,7 +214,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
           </section>
 
           {product.isConfidential && (
-            <div className="p-6 bg-red-500/5 rounded-2xl border border-red-500/10 text-xs text-neutral-500 leading-relaxed italic mono">
+            <div className="p-6 bg-red-500/5 rounded-2xl border border-red-500/10 text-xs text-[#9d9d9d] leading-relaxed italic mono">
               Access restricted due to organization compliance policies. Source code and live environments are private.
             </div>
           )}

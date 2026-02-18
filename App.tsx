@@ -446,8 +446,8 @@ const App: React.FC = () => {
                 <div key={idx} className="glass p-12 rounded-[2.5rem] group hover:border-blue-500/40 transition-all duration-500">
                   <span className="mono text-blue-500 text-[12px] uppercase tracking-widest block mb-4 font-bold">{edu.period}</span>
                   <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors tracking-tight">{edu.degree}</h3>
-                  <p className="text-neutral-500 mb-3 font-light italic text-lg">{edu.university}</p>
-                  <p className="text-sm text-neutral-500 font-light italic text-lg">{edu.institution} - {edu.city}</p>
+                  <p className="text-[#9d9d9d] mb-3 font-light italic text-lg">{edu.university}</p>
+                  <p className="text-sm text-[#9d9d9d] font-light italic text-lg">{edu.institution} - {edu.city}</p>
                 </div>
               ))}
             </div>
