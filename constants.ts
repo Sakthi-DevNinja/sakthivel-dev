@@ -361,7 +361,6 @@ export const EDUCATION = [
   //   percentage: "89%"
   // }
 ];
-
 export const AVAILABILITY = "I am actively open to Junior to Mid-level Full Stack or Web Developer roles, especially in ERP, SaaS, or product-based teams.";
 export const CORE_TECH = ["PHP", "MySQL", "JavaScript", "jQuery", "React", "HTML", "CSS", "AJAX"];
 export const INDEPENDENT_TECH = ["React.js", "Laravel", "Tailwind CSS"];
