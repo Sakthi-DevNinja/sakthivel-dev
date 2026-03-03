@@ -20,7 +20,7 @@ const App: React.FC = () => {
 
   function getLaunchDate() {
     // 👉 For testing:
-    // return new Date("2026-03-03T00:43:00");
+    // return new Date("2026-03-03T22:14:00");
 
     // 👉 For real launch:
     return new Date("2026-03-04T18:00:00");
@@ -131,14 +131,23 @@ const App: React.FC = () => {
                 </p>
 
                 <button
-                  onClick={() => setShowWelcome(false)}
                   className="
-                    w-full sm:w-auto
-                    px-8 py-3
-                    bg-white text-black
-                    rounded-full font-semibold
-                    hover:scale-105 transition
+                  w-full sm:w-auto
+                  px-8 py-3
+                  bg-white text-black
+                  rounded-full font-semibold
+                  hover:scale-105 transition
                   "
+                  onClick={() => {
+                    setShowWelcome(false);
+
+                    if (window.gtag) {
+                      window.gtag('event', 'explore_button', {
+                        event_category: 'explore',
+                        event_label: 'Explore button'
+                      });
+                    }
+                  }}
                 >
                   EXPLORE
                 </button>

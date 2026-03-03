@@ -30,7 +30,7 @@ export const TECHNICAL_CAPABILITIES = [
     category: "Frontend Engineering",
     skills: [
       "HTML5, CSS3",
-      "JavaScript (ES6+)",
+      "JavaScript",
       "jQuery, jQuery UI",
       "React.js",
       "Responsive and mobile-first design"
@@ -124,6 +124,7 @@ export const PRODUCTS: Product[] = [
     liveLink: "https://saporitosonline.com/",
     isConfidential: false,
     gallery: [
+      "./products/saporitos/mockup.webp",
       "./products/saporitos/home.webp",
       "./products/saporitos/menu.webp",
       "./products/saporitos/catering.webp",
@@ -191,31 +192,20 @@ export const PRODUCTS: Product[] = [
     status: "Live",
     isConfidential: true,
     gallery: [
-      "confidential"
+      "./products/serviceapp/1.webp",
+      "./products/serviceapp/2.webp",
+      "./products/serviceapp/3.webp",
+      "./products/serviceapp/4.webp",
+      "./products/serviceapp/5.webp",
+      "./products/serviceapp/6.webp",
+      "./products/serviceapp/7.webp",
+      "./products/serviceapp/mockup.webp",
     ]
   }
 
 ];
 
 export const SYSTEMS: SystemWork[] = [
-  {
-    id: "reports module",
-    name: "Custom ERP Dashboards & Reports Module",
-    objective: "Provide actionable business insights and improve presales visibility within OIMS ERP.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Designed interactive dashboards, presales analytics, Kanban-based workflow controllers, and drill-down reports for sales and operations teams.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
-  {
-    id: "presales dashboard",
-    name: "Presales Kanban & Workflow Controller",
-    objective: "Visualize and manage presales progression across multiple workflow stages.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Designed a Kanban-based workflow controller to track cold, warm, and hot presales stages with drill-down views, document navigation, and status-based filtering for sales teams.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
   {
     id: "oims azee",
     name: "OIMS AZEE – Ticket Raising Module",
@@ -259,6 +249,16 @@ export const SYSTEMS: SystemWork[] = [
     role: "UI/UX Developer (Full Stack Web Developer)",
     contribution:
       "Designed mobile-first service dashboards, job execution flows, OTP-based closures, geo-location tracking, expense logging, and technician checklists.",
+    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
+  },
+  
+  {
+    id: "presales dashboard",
+    name: "Presales Kanban & Workflow Controller",
+    objective: "Visualize and manage presales progression across multiple workflow stages.",
+    role: "UI/UX Developer (Full Stack Web Developer)",
+    contribution:
+      "Designed a Kanban-based workflow controller to track cold, warm, and hot presales stages with drill-down views, document navigation, and status-based filtering for sales teams.",
     technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
   },
   {
