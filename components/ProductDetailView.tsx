@@ -25,7 +25,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product })
   }, []);
 
   const handleBack = () => {
-    navigate("/product-lab");
+    navigate("/product-lab/");
   };
 
   const getStatusColor = (status: Product['status']) => {
