@@ -1,2 +1,4 @@
 https://iamsakthi.netlify.app/* https://iamsakthi.in/:splat 301!
 http://iamsakthi.in/* https://iamsakthi.in/:splat 301!
+
+/* /index.html 200
