@@ -62,10 +62,6 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled, name, onHomeClick, onL
       setActiveSection("product-lab");
     }
 
-    if (location.pathname.startsWith("/product/")) {
-      setActiveSection("product-lab");
-    }
-
     if (location.pathname === "/") {
       setActiveSection("home");
     }

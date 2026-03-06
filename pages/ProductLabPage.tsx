@@ -44,7 +44,7 @@ const ProductLabPage: React.FC = () => {
 
           <ProductLab
             products={PRODUCTS}
-            onSelectProduct={(p) => window.location.href = `/product/${p.id}/`}
+            onSelectProduct={(p) => window.location.href = `/product-lab/${p.id}/`}
           />
 
         </main>

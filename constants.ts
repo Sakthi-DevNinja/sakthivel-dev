@@ -124,15 +124,15 @@ export const PRODUCTS: Product[] = [
     liveLink: "https://saporitosonline.com/",
     isConfidential: false,
     gallery: [
-      "../products/saporitos/mockup.webp",
-      "../products/saporitos/home.webp",
-      "../products/saporitos/menu.webp",
-      "../products/saporitos/catering.webp",
-      "../products/saporitos/daily.webp",
-      "../products/saporitos/coupons.webp",
-      "../products/saporitos/about.webp",
-      "../products/saporitos/contact.webp",
-      "../products/saporitos/seo.webp"
+      "../../products/saporitos/mockup.webp",
+      "../../products/saporitos/home.webp",
+      "../../products/saporitos/menu.webp",
+      "../../products/saporitos/catering.webp",
+      "../../products/saporitos/daily.webp",
+      "../../products/saporitos/coupons.webp",
+      "../../products/saporitos/about.webp",
+      "../../products/saporitos/contact.webp",
+      "../../products/saporitos/seo.webp"
     ]
   },
   {
@@ -159,9 +159,9 @@ export const PRODUCTS: Product[] = [
     liveLink: "https://mirabellaapp.org/",
     isConfidential: false,
     gallery: [
-      "../products/mirabella/mockup.webp",
-      "../products/mirabella/opening page.webp",
-      "../products/mirabella/desktop mockup.webp"
+      "../../products/mirabella/mockup.webp",
+      "../../products/mirabella/opening page.webp",
+      "../../products/mirabella/desktop mockup.webp"
     ]
   },
   {
@@ -192,14 +192,14 @@ export const PRODUCTS: Product[] = [
     status: "Live",
     isConfidential: true,
     gallery: [
-      "../products/serviceapp/1.webp",
-      "../products/serviceapp/2.webp",
-      "../products/serviceapp/3.webp",
-      "../products/serviceapp/4.webp",
-      "../products/serviceapp/5.webp",
-      "../products/serviceapp/6.webp",
-      "../products/serviceapp/7.webp",
-      "../products/serviceapp/mockup.webp",
+      "../../products/serviceapp/1.webp",
+      "../../products/serviceapp/2.webp",
+      "../../products/serviceapp/3.webp",
+      "../../products/serviceapp/4.webp",
+      "../../products/serviceapp/5.webp",
+      "../../products/serviceapp/6.webp",
+      "../../products/serviceapp/7.webp",
+      "../../products/serviceapp/mockup.webp",
     ]
   }
 

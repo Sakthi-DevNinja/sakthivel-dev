@@ -23,7 +23,7 @@ const ProductDetailPage: React.FC = () => {
         scrolled={true}
         name={PERSON_NAME}
         onHomeClick={() => navigate("/")}
-        onLabClick={() => navigate("/product-lab")}
+        onLabClick={() => navigate("/product-lab/")}
       />
 
       <div className="grow">
