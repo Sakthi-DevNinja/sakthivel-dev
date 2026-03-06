@@ -24,7 +24,7 @@ export const ProductLab: React.FC<ProductLabProps> = ({ products, onSelectProduc
 
               onSelectProduct(product);
             }}
-            className="glass p-8 rounded-[2rem] glass-hover cursor-pointer transition-all duration-500 group relative flex flex-col h-full"
+            className="glass p-8 rounded-4xl glass-hover cursor-pointer transition-all duration-500 group relative flex flex-col h-full"
           >
           <div className="flex justify-between items-start mb-6">
             <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-500/20 transition-all">
@@ -36,7 +36,7 @@ export const ProductLab: React.FC<ProductLabProps> = ({ products, onSelectProduc
           </div>
           
           <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">{product.name}</h3>
-          <p className="text-sm text-neutral-400 font-light leading-relaxed mb-8 flex-grow">
+          <p className="text-sm text-neutral-400 font-light leading-relaxed mb-8 grow">
             {product.description}
           </p>
           

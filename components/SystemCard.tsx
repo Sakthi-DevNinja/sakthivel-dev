@@ -12,7 +12,7 @@ export const SystemCard: React.FC<SystemCardProps> = ({ system }) => {
       <div className="relative h-64 overflow-hidden bg-neutral-900 flex items-center justify-center">
         {/* Fix: Property 'image' does not exist on type 'SystemWork'. Replaced with a placeholder UI element. */}
         <div className="text-neutral-800 mono text-[10px] uppercase tracking-widest select-none">System Visualization Restricted</div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#030303] to-transparent opacity-80"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-[#030303] to-transparent opacity-80"></div>
         <div className="absolute bottom-6 left-6 flex gap-2">
           
           {/* Fix: Added optional chaining for 'tags' property which is optional in SystemWork. */}

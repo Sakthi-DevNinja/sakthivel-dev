@@ -93,7 +93,7 @@ export const CONFIDENTIAL_NOTICE = "Most of the ERP and internal system work sho
 export const PRODUCTS: Product[] = [
 
   {
-    id: "saporitos-platform",
+    id: "saporitos",
     name: "Saporito’s Italian Restaurant & Pizzeria",
     tagline: "A Responsive Website for Modern Dining",
     description: "A responsive and user-friendly restaurant website built to showcase menu offerings, restaurant information, locations, and online ordering options for Saporito’s Italian Restaurant & Pizzeria.",
@@ -124,15 +124,15 @@ export const PRODUCTS: Product[] = [
     liveLink: "https://saporitosonline.com/",
     isConfidential: false,
     gallery: [
-      "./products/saporitos/mockup.webp",
-      "./products/saporitos/home.webp",
-      "./products/saporitos/menu.webp",
-      "./products/saporitos/catering.webp",
-      "./products/saporitos/daily.webp",
-      "./products/saporitos/coupons.webp",
-      "./products/saporitos/about.webp",
-      "./products/saporitos/contact.webp",
-      "./products/saporitos/seo.webp"
+      "../products/saporitos/mockup.webp",
+      "../products/saporitos/home.webp",
+      "../products/saporitos/menu.webp",
+      "../products/saporitos/catering.webp",
+      "../products/saporitos/daily.webp",
+      "../products/saporitos/coupons.webp",
+      "../products/saporitos/about.webp",
+      "../products/saporitos/contact.webp",
+      "../products/saporitos/seo.webp"
     ]
   },
   {
@@ -159,13 +159,13 @@ export const PRODUCTS: Product[] = [
     liveLink: "https://mirabellaapp.org/",
     isConfidential: false,
     gallery: [
-      "./products/mirabella/mockup.webp",
-      "./products/mirabella/opening page.webp",
-      "./products/mirabella/desktop mockup.webp"
+      "../products/mirabella/mockup.webp",
+      "../products/mirabella/opening page.webp",
+      "../products/mirabella/desktop mockup.webp"
     ]
   },
   {
-    id: "service-execution-app",
+    id: "service-app",
     name: "Service Execution App",
     tagline: "Mobile-First Field Service Management",
     description: "A mobile-friendly service execution application built as an extension of the OIMS ERP system to support field engineers with real-time service tracking, reporting, and job execution.",
@@ -192,14 +192,14 @@ export const PRODUCTS: Product[] = [
     status: "Live",
     isConfidential: true,
     gallery: [
-      "./products/serviceapp/1.webp",
-      "./products/serviceapp/2.webp",
-      "./products/serviceapp/3.webp",
-      "./products/serviceapp/4.webp",
-      "./products/serviceapp/5.webp",
-      "./products/serviceapp/6.webp",
-      "./products/serviceapp/7.webp",
-      "./products/serviceapp/mockup.webp",
+      "../products/serviceapp/1.webp",
+      "../products/serviceapp/2.webp",
+      "../products/serviceapp/3.webp",
+      "../products/serviceapp/4.webp",
+      "../products/serviceapp/5.webp",
+      "../products/serviceapp/6.webp",
+      "../products/serviceapp/7.webp",
+      "../products/serviceapp/mockup.webp",
     ]
   }
 

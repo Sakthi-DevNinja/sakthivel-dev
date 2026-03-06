@@ -1,14 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
-import { Navbar } from './components/Navbar';
-import { ProjectCard } from './components/ProjectCard';
-import { ExperienceSection } from './components/ExperienceSection';
-import { ProductLab } from './components/ProductLab';
-import { ProductDetailView } from './components/ProductDetailView';
-import TechnicalCapabilities from './components/TechnicalCapabilities';
+import { Navbar } from '../components/Navbar';
+import { ProjectCard } from '../components/ProjectCard';
+import { ExperienceSection } from '../components/ExperienceSection';
+import TechnicalCapabilities from '../components/TechnicalCapabilities';
 import { 
   PERSON_NAME, 
-  HEADLINE, 
   ABOUT_TEXT, 
   HOW_I_WORK,
   SYSTEM_THINKING_TEXT,
@@ -18,27 +14,21 @@ import {
   SYSTEMS, 
   EXPERIENCE, 
   EDUCATION, 
-  AVAILABILITY,
-  PRODUCTS
-} from './constants';
-import { Product } from './types';
+  AVAILABILITY
+} from '../constants';
 
-import { SocialMedia } from "./components/SocialMedia";
+import { SocialMedia } from "../components/SocialMedia";
+import { Footer } from "../components/Footer";
 
-type ViewState = 'HOME' | 'PRODUCT_LAB' | 'PRODUCT_DETAIL';
+const PROFILE_IMAGE = "/owner/sakthi.webp";
+const ABOUT_IMAGE = "/owner/about-sakthi.webp";
 
-const PROFILE_IMAGE = "./owner/sakthi.webp";
-const ABOUT_IMAGE = "./owner/about-sakthi.webp";
-
-// For Project load count
 const INITIAL_COUNT = 4;
 
-const App: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [view, setView] = useState<ViewState>('HOME');
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [expanded, setExpanded] = React.useState(false);
+const Home: React.FC = () => {
 
+  const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -49,57 +39,34 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash;
-      
-      if (hash === '#product-lab') {
-        setView('PRODUCT_LAB');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (hash.startsWith('#product/')) {
-        const id = hash.replace('#product/', '');
-        const p = PRODUCTS.find(prod => prod.id === id);
-        if (p) {
-          setSelectedProduct(p);
-          setView('PRODUCT_DETAIL');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-          setView('HOME');
-        }
-      } else {
-        const wasSubpage = view !== 'HOME';
-        setView('HOME');
-        
-        if (hash && hash !== '#' && hash !== '') {
-          const delay = wasSubpage ? 100 : 0;
-          setTimeout(() => {
-            const el = document.querySelector(hash);
-            if (el) {
-              const yOffset = -100;
-              const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-              window.scrollTo({ top: y, behavior: 'smooth' });
-            }
-          }, delay);
-        } else if (wasSubpage) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+
+      if (!hash) return;
+
+      const el = document.querySelector(hash);
+
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth"
+        });
       }
     };
 
-    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener("hashchange", handleHashChange);
     handleHashChange();
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, [view]);
+
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   const handleHomeClick = () => {
-    if (view === 'HOME') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      window.history.pushState(null, '', '#');
-    } else {
-      window.location.hash = '';
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-
   const handleLabClick = () => {
-    // Google Analytics event
+
     if (window.gtag) {
       window.gtag('event', 'product_lab_access', {
         event_category: 'engagement',
@@ -107,58 +74,29 @@ const App: React.FC = () => {
         value: 1
       });
     }
-    window.location.hash = '#product-lab';
+
+    window.location.href = "/product-lab/";
   };
-
-  if (view === 'PRODUCT_DETAIL' && selectedProduct) {
-    return (
-      <section id="product-lab-detailed">
-        <div className="relative z-10 min-h-screen flex flex-col bg-black">
-          <Navbar scrolled={scrolled} name={PERSON_NAME} onHomeClick={handleHomeClick} onLabClick={handleLabClick} />
-          <div className="flex-grow">
-            <ProductDetailView product={selectedProduct} onBack={handleLabClick} />
-          </div>
-          <Footer />
-        </div>
-      </section>
-    );
-  }
-
-  if (view === 'PRODUCT_LAB') {
-    return (
-      <section id="product-lab">
-        <div className="relative z-10 min-h-screen flex flex-col bg-black">
-          <Navbar scrolled={scrolled} name={PERSON_NAME} onHomeClick={handleHomeClick} onLabClick={handleLabClick} />
-          <main className="max-w-6xl mx-auto py-40 px-6 flex-grow">
-            <div className="text-center mb-24">
-              <h2 className="mono text-blue-500 text-sm uppercase tracking-[0.25em] mb-8">The Product Lab</h2>
-              <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-gradient leading-tight mb-8">
-                System Catalog
-              </h1>
-              <p className="text-xl text-neutral-400 font-light max-w-2xl mx-auto">
-                A detailed technical breakdown of production systems, architecture choices, and developer workflows.
-              </p>
-            </div>
-            <ProductLab products={PRODUCTS} onSelectProduct={(p) => window.location.hash = `#product/${p.id}`} />
-          </main>
-          <Footer />
-        </div>
-      </section>
-    );
-  }
 
   return (
     <div className="relative z-10 min-h-screen flex flex-col bg-black">
-      <Navbar scrolled={scrolled} name={PERSON_NAME} onHomeClick={handleHomeClick} onLabClick={handleLabClick} />
 
-      <main className="flex-grow">
+      <Navbar
+        scrolled={scrolled}
+        name={PERSON_NAME}
+        onHomeClick={handleHomeClick}
+        onLabClick={handleLabClick}
+      />
+
+      
+      <main className="grow">
         {/* Cinematic Hero Section */}
         <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black px-6">
 
           {/* <div className="absolute left-[10rem] top-[10rem]  w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.8)] z-10"></div> */}
           
           {/* Glow Effect absolute center */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[34rem] h-[34rem] rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-136 h-136 rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
 
 
           <div className="absolute inset-0 flex items-center justify-center pt-28 md:pt-40">
@@ -174,15 +112,15 @@ const App: React.FC = () => {
           </div>
 
           {/* Architecture & Full Stack Engineering */}
-          <div className="relative z-20 flex flex-col items-center text-center mt-[32rem] md:mt-[30rem]">
+          <div className="relative z-20 flex flex-col items-center text-center mt-12 md:mt-120">
              <h2 className="text-[#3B82F6] font-bold tracking-[0.2em] md:tracking-[0.4em] mb-2 text-[0.6rem] md:text-xl drop-shadow-lg">
                FULL STACK WEB DEVELOPER | ERP & SaaS PRODUCTS
              </h2>
-             <h1 className="text-5xl md:text-9xl lg:text-[10rem] font-bold tracking-[0.1em] leading-none uppercase select-none metallic-text whitespace-nowrap">
+             <h1 className="text-5xl md:text-9xl lg:text-[10rem] font-bold tracking-widest leading-none uppercase select-none metallic-text whitespace-nowrap">
                 {PERSON_NAME}
              </h1>
 
-              <p className="text-[#9d9d9d] text-[0.6rem] font-bold tracking-[0.1em] md:tracking-[0.2em] mt-2 text-md md:text-[1rem]">3 Years | PHP, MySQL, JavaScript, jQuery, React, HTML, CSS</p>    
+              <p className="text-[#9d9d9d] text-[0.6rem] font-bold tracking-widest md:tracking-[0.2em] mt-2 text-md md:text-[1rem]">3 Years | PHP, MySQL, JavaScript, jQuery, React, HTML, CSS</p>    
 
               <SocialMedia className="justify-center mt-8" />
 
@@ -193,20 +131,20 @@ const App: React.FC = () => {
         <section id="about" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-16">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">01 / Perspective</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
             
             <div className="glass p-8 md:p-16 rounded-[3rem] relative overflow-hidden flex flex-col md:flex-row gap-12 items-start">
 
                {/* Glow Effect - left bottom */}
-               {/* <div className="absolute left-[0rem] bottom-[0rem] -translate-x-1/2 translate-y-1/2 w-[50rem] h-[50rem] rounded-full bg-blue-800/20 blur-[140px] z-0"></div> */}
+               {/* <div className="absolute left-0 bottom-[0rem] -translate-x-1/2 translate-y-1/2 w-[50rem] h-[50rem] rounded-full bg-blue-800/20 blur-[140px] z-0"></div> */}
                {/* Glow Effect - right top */}
             
-               <div className="absolute right-[0rem] top-[0rem] translate-x-1/2 -translate-y-1/2 w-[20rem] h-[20rem] rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
+               <div className="absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 w-[20rem] h-80 rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
 
-               <div className="w-24 h-24 md:w-40 md:h-40 rounded-[2rem] overflow-hidden border-2 border-blue-500/20 shrink-0 shadow-2xl relative group bg-black">
+               <div className="w-24 h-24 md:w-40 md:h-40 rounded-4xl overflow-hidden border-2 border-blue-500/20 shrink-0 shadow-2xl relative group bg-black">
                   <img 
                     src={ABOUT_IMAGE} 
                     alt={PERSON_NAME} 
@@ -251,12 +189,12 @@ const App: React.FC = () => {
         <section id="how-i-work" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-12">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">02 / Operational Strategy</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
             <div className="glass p-8 md:p-14 rounded-[2.5rem] border-blue-500/10 relative overflow-hidden">
-                 <div className="absolute left-[0rem] top-[0rem] -translate-x-1/2 -translate-y-1/2 w-[20rem] h-[20rem] rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
+                 <div className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 w-[20rem] h-80 rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
                 {HOW_I_WORK.map((howIWork, idx) => (
                   <p key={idx} className="text-lg md:text-xl font-light leading-relaxed text-neutral-300 mb-6 last:mb-0 relative" >
                     {howIWork}
@@ -270,13 +208,13 @@ const App: React.FC = () => {
         <section id="arch-thinking" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-12">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">03 / System & Architecture Thinking</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
-            <div className="glass p-8 md:p-14 rounded-[2.5rem] border-blue-500/10 bg-white/[0.01] relative overflow-hidden">
+            <div className="glass p-8 md:p-14 rounded-[2.5rem] border-blue-500/10 bg-white/1 relative overflow-hidden">
 
-              <div className="absolute right-[0rem] top-[0rem] translate-x-1/2 -translate-y-1/2 w-[20rem] h-[20rem] rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
+              <div className="absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 w-[20rem] h-80 rounded-full bg-blue-800/20 blur-[140px] z-0"></div>
 
               <p className="text-lg md:text-xl font-light leading-relaxed text-neutral-300">
                 {SYSTEM_THINKING_TEXT}
@@ -289,9 +227,9 @@ const App: React.FC = () => {
         <section id="technical-capabilities" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-16">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono"> 04 / Technical Capabilities</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
             <TechnicalCapabilities />
           </div>
@@ -302,13 +240,13 @@ const App: React.FC = () => {
         <section id="strengths" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-16">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">05 / Core Impact Matrix</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {KEY_STRENGTHS.map((strength, idx) => (
-                <div key={idx} className="glass p-10 rounded-[2rem] border-white/5 hover:border-blue-500/30 transition-all duration-500 flex flex-col justify-center group">
+                <div key={idx} className="glass p-10 rounded-4xl border-white/5 hover:border-blue-500/30 transition-all duration-500 flex flex-col justify-center group">
                   <div className="w-10 h-px bg-blue-500 mb-6 opacity-30 group-hover:w-16 group-hover:opacity-100 transition-all"></div>
                   <p className="text-neutral-300 text-lg font-light leading-relaxed">{strength}</p>
                 </div>
@@ -321,9 +259,9 @@ const App: React.FC = () => {
         <section id="internal-tools-philosophy" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-12">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">06 / Building Internal Tools That Matter</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
             <div className="glass p-8 md:p-14 rounded-[2.5rem] border-blue-500/10 border-dashed">
               <p className="text-lg md:text-xl font-light leading-relaxed text-neutral-300">
@@ -337,14 +275,14 @@ const App: React.FC = () => {
         <section id="lab-teaser" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
              <div className="flex items-center gap-6 mb-16">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">07 / Product Lab Hub</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
             
             <div className="glass p-12 md:p-24 rounded-[4rem] text-center border-blue-500/10 relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-blue-500 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-blue-500 to-transparent"></div>
               <div className="absolute top-0 left-0 w-full h-full bg-blue-500/5 pointer-events-none group-hover:bg-blue-500/10 transition-all duration-700"></div>
               <h3 className="text-4xl md:text-7xl font-bold mb-10 tracking-tighter text-gradient">The Lab Ecosystem</h3>
               <p className="text-xl md:text-2xl text-neutral-400 mb-14 max-w-2xl mx-auto font-light leading-relaxed">
@@ -352,7 +290,7 @@ const App: React.FC = () => {
               </p>
               <button 
                 onClick={handleLabClick}
-                className="px-14 py-6 glass border-blue-500/40 text-blue-400 font-bold rounded-full hover:bg-blue-500/20 transition-all uppercase tracking-widest text-sm"
+                className="px-14 py-6 glass border-blue-500/40 text-blue-400 font-bold rounded-full hover:bg-blue-500/20 transition-all uppercase tracking-widest text-lg"
               >
                 Access Product Lab
               </button>
@@ -364,19 +302,19 @@ const App: React.FC = () => {
         <section id="work" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-12">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">08 / Architecture Selected</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
 
             <div className="max-w-4xl mx-auto mb-20">
                <div className="glass p-8 rounded-3xl border-dashed border-blue-500/20 bg-blue-500/5 flex flex-col md:flex-row items-center gap-8">
-                  <div className="w-14 h-14 rounded-2xl border border-blue-500/30 flex items-center justify-center flex-shrink-0 bg-blue-500/10">
+                  <div className="w-14 h-14 rounded-2xl border border-blue-500/30 flex items-center justify-center shrink-0 bg-blue-500/10">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="mono text-[10px] uppercase tracking-[0.4em] text-blue-500 mb-2 font-bold">Confidentiality Protocol</h3>
-                    <p className="text-sm text-neutral-400 leading-relaxed italic">{CONFIDENTIAL_NOTICE}</p>
+                    <p className="text-lg text-neutral-400 leading-relaxed italic">{CONFIDENTIAL_NOTICE}</p>
                   </div>
                </div>
             </div>
@@ -411,12 +349,12 @@ const App: React.FC = () => {
         </section>
 
         {/* 09 / Career Matrix */}
-        <section id="experience" className="py-24 px-6 bg-white/[0.005]">
+        <section id="experience" className="py-24 px-6 bg-white/0.5">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-6 mb-20">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">09 / Career Matrix</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
             
             <div className="space-y-24">
@@ -431,9 +369,9 @@ const App: React.FC = () => {
         <section id="education" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-6 mb-16">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">10 / Academic Foundation</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -442,7 +380,7 @@ const App: React.FC = () => {
                   <span className="mono text-blue-500 text-[12px] uppercase tracking-widest block mb-4 font-bold">{edu.period}</span>
                   <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors tracking-tight">{edu.degree}</h3>
                   <p className="text-[#9d9d9d] mb-3 font-light italic text-lg">{edu.university}</p>
-                  <p className="text-sm text-[#9d9d9d] font-light italic text-lg">{edu.institution} - {edu.city}</p>
+                  <p className="text-lg text-[#9d9d9d] font-light italic">{edu.institution} - {edu.city}</p>
                 </div>
               ))}
             </div>
@@ -454,9 +392,9 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto">
 
             <div className="flex items-center gap-6 mb-16">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-r from-transparent to-blue-500/50"></div>
               <h2 className="text-xs md:text-lg uppercase tracking-[0.25em] text-blue-500 mono">11 / Protocol: Handshake</h2>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+              <div className="h-px flex-1 bg-linear-to-l from-transparent to-blue-500/50"></div>
             </div>
 
             <div className="mb-16 text-center">
@@ -466,7 +404,7 @@ const App: React.FC = () => {
             </div>
 
             <div className="glass rounded-[4rem] p-12 md:p-32 text-center relative overflow-hidden group border-blue-500/10">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-blue-500 to-transparent"></div>
               <h2 className="text-5xl md:text-8xl font-bold mb-12 tracking-tighter">Initiate Direct Link.</h2>
               <p className="text-xl md:text-2xl text-neutral-400 mb-20 max-w-xl mx-auto font-light leading-relaxed">
                 Ready to architect reliable software systems. Let's build something that scales.
@@ -493,40 +431,10 @@ const App: React.FC = () => {
         </section>
       </main>
 
-      {/* Footer */}
       <Footer />
 
     </div>
   );
 };
-const Footer: React.FC = () => (
-  <footer className="py-20 px-6 text-center border-t border-white/5 relative overflow-hidden bg-black">
-    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-blue-600/5 filter blur-[120px] rounded-full -z-10"></div>
 
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-      <div className="flex flex-col gap-2 text-left">
-        <p className="mono text-[10px] md:text-[11px] uppercase tracking-[0.25em] md:tracking-[0.25em] text-neutral-700">
-          SAKTHIVEL S // FULL STACK WEB DEVELOPER 
-        </p>
-        <p className="mono text-[10px] tracking-[0.3em] text-neutral-800 uppercase text-center md:text-left
-">
-          © {new Date().getFullYear()} All rights reserved
-        </p>
-      </div>
-
-      <div className="flex gap-4">
-        <span className="text-[10px] text-neutral-800 mono tracking-widest uppercase">
-          Production Systems Experience
-        </span>
-        <span className="text-[10px] text-neutral-800 mono tracking-widest uppercase">
-          //
-        </span>
-        <span className="text-[10px] text-neutral-800 mono tracking-widest uppercase">
-          ERP & SaaS Focus
-        </span>
-      </div>
-    </div>
-  </footer>
-);
-
-export default App;
+export default Home;

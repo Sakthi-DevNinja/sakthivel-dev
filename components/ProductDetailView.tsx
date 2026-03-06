@@ -1,13 +1,15 @@
-
 import React, { useState, useEffect } from 'react';
 import { Product } from '../types';
+import { useNavigate } from "react-router-dom";
 
 interface ProductDetailViewProps {
   product: Product;
-  onBack: () => void;
 }
 
-export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, onBack }) => {
+export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product }) => {
+
+  const navigate = useNavigate();
+
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Handle ESC key to close modal
@@ -17,9 +19,14 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
         setSelectedImage(null);
       }
     };
+
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
   }, []);
+
+  const handleBack = () => {
+    navigate("/product-lab");
+  };
 
   const getStatusColor = (status: Product['status']) => {
     switch (status) {
@@ -33,8 +40,9 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
 
   return (
     <div className="max-w-5xl mx-auto py-32 px-6">
+
       <button 
-        onClick={onBack}
+        onClick={handleBack}
         className="flex items-center gap-2 text-[#9d9d9d] hover:text-white transition-colors mono text-xs uppercase tracking-widest mb-12 mt-4"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -112,17 +120,17 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
             
             <div className="grid grid-cols-1 gap-10">
               <div className="space-y-2">
-                <span className="mono text-[9px] uppercase tracking-[0.3em] text-[#9d9d9d]">The Problem</span>
+                <span className="mono text-[10px] uppercase tracking-[0.3em] text-[#9d9d9d]">The Problem</span>
                 <p className="text-lg text-neutral-300 font-light leading-relaxed">{product.problemStatement}</p>
               </div>
               
               <div className="space-y-2">
-                <span className="mono text-[9px] uppercase tracking-[0.3em] text-blue-500">The Solution</span>
+                <span className="mono text-[10px] uppercase tracking-[0.3em] text-blue-500">The Solution</span>
                 <p className="text-lg text-neutral-300 font-light leading-relaxed">{product.solutionStatement || "Architecture designed to solve operational friction through optimized data flow."}</p>
               </div>
 
               <div className="space-y-2">
-                <span className="mono text-[9px] uppercase tracking-[0.3em] text-green-500">The Impact</span>
+                <span className="mono text-[10px] uppercase tracking-[0.3em] text-green-500">The Impact</span>
                 <p className="text-lg text-neutral-300 font-light leading-relaxed">{product.impactStatement || "Significant improvement in system reliability and user workflow transparency."}</p>
               </div>
             </div>
@@ -131,7 +139,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
           {/* Key Features */}
           <section>
             <h2 className="mono text-[10px] uppercase tracking-[0.25em] text-blue-500 mb-6">System Architecture</h2>
-            <div className="gap-6 flex flex-col items-start gap-4 group hover:border-blue-500/30 transition-all">
+            <div className="gap-6 flex flex-col items-start group hover:border-blue-500/30 transition-all">
               {product.features.map((feature, i) => (
                 <div key={i} className="flex gap-6">
                   <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0 group-hover:animate-ping"></div>
@@ -172,7 +180,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
                 ))}
               </div>
               {product.isConfidential && (
-                <p className="mt-4 text-[10px] mono text-neutral-600 italic leading-relaxed">
+                <p className="mt-4 text-[11px] mono text-neutral-600 italic leading-relaxed">
                   Note: Screenshots are partial and modified for demonstration purposes to comply with internal security protocols.
                 </p>
               )}
@@ -224,11 +232,11 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product, o
       {/* Image Preview Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl animate-in fade-in duration-300"
+          className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl animate-in fade-in duration-300"
           onClick={() => setSelectedImage(null)}
         >
           <button 
-            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[100]"
+            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-100"
             onClick={() => setSelectedImage(null)}
           >
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

@@ -23,7 +23,7 @@ const TechnicalCapabilities: React.FC = () => {
           <ul className="space-y-4">
             {cap.skills.map((skill, idx) => (
               <li key={idx} className="flex items-start gap-4 text-neutral-400 group-hover:text-neutral-300 transition-colors">
-                <span className="w-1.5 h-px bg-blue-500/50 mt-2.5 flex-shrink-0"></span>
+                <span className="w-1.5 h-px bg-blue-500/50 mt-2.5 shrink-0"></span>
                 <span className="text-base font-light leading-relaxed tracking-wide">
                   {skill}
                 </span>
@@ -31,7 +31,7 @@ const TechnicalCapabilities: React.FC = () => {
             ))}
           </ul>
           
-          <div className="mt-10 h-px w-full bg-gradient-to-r from-white/5 via-white/10 to-transparent"></div>
+          <div className="mt-10 h-px w-full bg-linear-to-r from-white/5 via-white/10 to-transparent"></div>
         </div>
       ))}
     </div>

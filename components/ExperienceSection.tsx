@@ -19,11 +19,11 @@ export const ExperienceSection: React.FC<{ experience: ExperienceItem }> = ({ ex
       <div className="space-y-20">
         {experience.roles.map((role, rIdx) => (
           <div key={rIdx} className="relative group">
-            <div className="absolute -left-[53px] top-2 w-2 h-2 rounded-full border border-blue-500/50 bg-black group-hover:bg-blue-500 transition-colors"></div>
+            <div className="absolute -left-13.25 top-2 w-2 h-2 rounded-full border border-blue-500/50 bg-black group-hover:bg-blue-500 transition-colors"></div>
             
             <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-8 gap-4">
               <h4 className="text-2xl font-semibold text-blue-400">{role.title}</h4>
-              <span className="mono text-xs text-neutral-600 bg-white/5 px-4 py-1 rounded-full border border-white/5">{role.duration}</span>
+              <span className="mono text-xs text-neutral-300 bg-blue-600/20 px-4 py-2 rounded-full border border-white/5">{role.duration}</span>
             </div>
 
             {role.description && (
@@ -42,7 +42,7 @@ export const ExperienceSection: React.FC<{ experience: ExperienceItem }> = ({ ex
                   <ul className="space-y-4 max-w-3xl">
                     {role.highlights.map((h, i) => (
                       <li key={i} className="flex gap-4 text-neutral-400 leading-relaxed font-light">
-                        <span className="text-blue-500 flex-shrink-0 mt-1.5 opacity-50">•</span>
+                        <span className="text-blue-500 shrink-0 mt-1.5 opacity-50">•</span>
                         {h}
                       </li>
                     ))}
