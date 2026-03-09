@@ -112,7 +112,7 @@ const Home: React.FC = () => {
           </div>
 
           {/* Architecture & Full Stack Engineering */}
-          <div className="relative z-20 flex flex-col items-center text-center mt-12 md:mt-120">
+          <div className="relative z-20 flex flex-col items-center text-center mt-120 md:mt-120">
              <h2 className="text-[#3B82F6] font-bold tracking-[0.2em] md:tracking-[0.4em] mb-2 text-[0.6rem] md:text-xl drop-shadow-lg">
                FULL STACK WEB DEVELOPER | ERP & SaaS PRODUCTS
              </h2>
