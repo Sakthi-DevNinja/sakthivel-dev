@@ -88,7 +88,7 @@ export const KEY_STRENGTHS = [
   "Mobile-friendly web applications for field teams and internal operations"
 ];
 
-export const CONFIDENTIAL_NOTICE = "Most of the ERP and internal system work showcased in this portfolio is part of a product-based organization. Due to confidentiality and company policies, project links, internal screenshots, and source code are not publicly shared. However, detailed explanations, workflows, and architectural decisions can be discussed during interviews.";
+export const CONFIDENTIAL_NOTICE = "Most of the ERP and internal system work showcased in this portfolio is part of a product-based organization. Due to confidentiality and company policies, project links, internal screenshots, and source code are not publicly shared.";
 
 export const PRODUCTS: Product[] = [
 
@@ -163,131 +163,132 @@ export const PRODUCTS: Product[] = [
       "../../products/mirabella/opening page.webp",
       "../../products/mirabella/desktop mockup.webp"
     ]
-  },
-  {
-    id: "service-app",
-    name: "Service Execution App",
-    tagline: "Mobile-First Field Service Management",
-    description: "A mobile-friendly service execution application built as an extension of the OIMS ERP system to support field engineers with real-time service tracking, reporting, and job execution.",
-    problemStatement: "Field engineers and service teams needed a reliable mobile solution to access service tickets, execute jobs in real time, track activities, record expenses, and close service requests with proper verification while working in the field.",
-    solutionStatement: "Designed and developed a mobile-first service application integrated with the OIMS ERP that enables technicians to manage service tickets, perform structured service execution, track locations, submit reports, log expenses, and securely close jobs using OTP-based verification.",
-    impactStatement: "Improved operational efficiency for field service teams by reducing manual paperwork, ensuring accurate service execution tracking, and enabling secure and verifiable service closures.",
-    features: [
-      "Mobile-responsive service dashboard with category-wise service counts",
-      "Card-based service ticket listing with detailed customer and job information",
-      "Tab-based service status filtering (Open, In-Progress, Closed)",
-      "Detailed service ticket view with service history and call logs",
-      "Technician scheduling and assignment",
-      "Structured service execution workflow with visit reports and file uploads",
-      "Mandatory technician checklists for service compliance",
-      "Geo-location tracking during job start and completion",
-      "Service log and timeline tracking",
-      "Multiple service closure methods including OTP-based verification",
-      "Customer feedback and rating capture on service closure",
-      "Expense tracking with document uploads for job-related costs"
-    ],
-    developerContribution: "Worked as UI/UX Developer and Full Stack Web Developer in the core engineering team. Designed mobile-first user interfaces, implemented service execution workflows, integrated geo-location and OTP-based verification, and developed expense tracking and service closure modules.",
-    techStack: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"],
-    organization: "EssEmm Technologies",
-    status: "Live",
-    isConfidential: true,
-    gallery: [
-      "../../products/serviceapp/1.webp",
-      "../../products/serviceapp/2.webp",
-      "../../products/serviceapp/3.webp",
-      "../../products/serviceapp/4.webp",
-      "../../products/serviceapp/5.webp",
-      "../../products/serviceapp/6.webp",
-      "../../products/serviceapp/7.webp",
-      "../../products/serviceapp/mockup.webp",
-    ]
   }
+  // ,
+  // {
+  //   id: "service-app",
+  //   name: "Service Execution App",
+  //   tagline: "Mobile-First Field Service Management",
+  //   description: "A mobile-friendly service execution application built as an extension of the OIMS ERP system to support field engineers with real-time service tracking, reporting, and job execution.",
+  //   problemStatement: "Field engineers and service teams needed a reliable mobile solution to access service tickets, execute jobs in real time, track activities, record expenses, and close service requests with proper verification while working in the field.",
+  //   solutionStatement: "Designed and developed a mobile-first service application integrated with the OIMS ERP that enables technicians to manage service tickets, perform structured service execution, track locations, submit reports, log expenses, and securely close jobs using OTP-based verification.",
+  //   impactStatement: "Improved operational efficiency for field service teams by reducing manual paperwork, ensuring accurate service execution tracking, and enabling secure and verifiable service closures.",
+  //   features: [
+  //     "Mobile-responsive service dashboard with category-wise service counts",
+  //     "Card-based service ticket listing with detailed customer and job information",
+  //     "Tab-based service status filtering (Open, In-Progress, Closed)",
+  //     "Detailed service ticket view with service history and call logs",
+  //     "Technician scheduling and assignment",
+  //     "Structured service execution workflow with visit reports and file uploads",
+  //     "Mandatory technician checklists for service compliance",
+  //     "Geo-location tracking during job start and completion",
+  //     "Service log and timeline tracking",
+  //     "Multiple service closure methods including OTP-based verification",
+  //     "Customer feedback and rating capture on service closure",
+  //     "Expense tracking with document uploads for job-related costs"
+  //   ],
+  //   developerContribution: "Worked as UI/UX Developer and Full Stack Web Developer in the core engineering team. Designed mobile-first user interfaces, implemented service execution workflows, integrated geo-location and OTP-based verification, and developed expense tracking and service closure modules.",
+  //   techStack: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"],
+  //   organization: "EssEmm Technologies",
+  //   status: "Live",
+  //   isConfidential: true,
+  //   gallery: [
+  //     "../../products/serviceapp/1.webp",
+  //     "../../products/serviceapp/2.webp",
+  //     "../../products/serviceapp/3.webp",
+  //     "../../products/serviceapp/4.webp",
+  //     "../../products/serviceapp/5.webp",
+  //     "../../products/serviceapp/6.webp",
+  //     "../../products/serviceapp/7.webp",
+  //     "../../products/serviceapp/mockup.webp",
+  //   ]
+  // }
 
 ];
 
 export const SYSTEMS: SystemWork[] = [
-  {
-    id: "oims azee",
-    name: "OIMS AZEE – Ticket Raising Module",
-    objective: "Standardize and simplify internal and customer support ticket creation within ERP.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Designed a clean ticket creation interface supporting multiple request types, attachments, and mobile-friendly access with Telegram notification integration.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
-  {
-    id: "ticket analyzer",
-    name: "OIMS Ticket Analyzer",
-    objective: "Centralize ticket analysis, communication history, and workflow visibility.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Developed tabular and Kanban views, advanced filters, inline editing, Telegram conversation archiving, printable reports, and analytical dashboards.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
-  {
-    id: "time analyzer",
-    name: "OIMS Time Analyzer (Activity & Effort Tracking)",
-    objective: "Track, analyze, and report engineer time across tickets, services, and projects.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Designed hierarchical time tracking views, engineer-wise analysis, budget comparisons, exportable reports, and detailed activity logs.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
-  {
-    id: "oims fbo",
-    name: "OIMS FBO – Menu Management System",
-    objective: "Modernize restaurant menu management while preserving existing workflows.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Rebuilt legacy menu pages, added image upload and edit features, drag-and-drop ordering, category-wise pricing, and printable menu templates.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS"]
-  },
-  {
-    id: "service app",
-    name: "Service App (Mobile-Friendly ERP Extension)",
-    objective: "Enable field engineers to manage service execution, tracking, and reporting on mobile devices.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Designed mobile-first service dashboards, job execution flows, OTP-based closures, geo-location tracking, expense logging, and technician checklists.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
+  // {
+  //   id: "oims azee",
+  //   name: "OIMS AZEE – Ticket Raising Module",
+  //   objective: "Standardize and simplify internal and customer support ticket creation within ERP.",
+  //   role: "UI/UX Developer (Full Stack Web Developer)",
+  //   contribution:
+  //     "Designed a clean ticket creation interface supporting multiple request types, attachments, and mobile-friendly access with Telegram notification integration.",
+  //   technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
+  // },
+  // {
+  //   id: "ticket analyzer",
+  //   name: "OIMS Ticket Analyzer",
+  //   objective: "Centralize ticket analysis, communication history, and workflow visibility.",
+  //   role: "UI/UX Developer (Full Stack Web Developer)",
+  //   contribution:
+  //     "Developed tabular and Kanban views, advanced filters, inline editing, Telegram conversation archiving, printable reports, and analytical dashboards.",
+  //   technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
+  // },
+  // {
+  //   id: "time analyzer",
+  //   name: "OIMS Time Analyzer (Activity & Effort Tracking)",
+  //   objective: "Track, analyze, and report engineer time across tickets, services, and projects.",
+  //   role: "UI/UX Developer (Full Stack Web Developer)",
+  //   contribution:
+  //     "Designed hierarchical time tracking views, engineer-wise analysis, budget comparisons, exportable reports, and detailed activity logs.",
+  //   technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
+  // },
+  // {
+  //   id: "oims fbo",
+  //   name: "OIMS FBO – Menu Management System",
+  //   objective: "Modernize restaurant menu management while preserving existing workflows.",
+  //   role: "UI/UX Developer (Full Stack Web Developer)",
+  //   contribution:
+  //     "Rebuilt legacy menu pages, added image upload and edit features, drag-and-drop ordering, category-wise pricing, and printable menu templates.",
+  //   technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS"]
+  // },
+  // {
+  //   id: "service app",
+  //   name: "Service App (Mobile-Friendly ERP Extension)",
+  //   objective: "Enable field engineers to manage service execution, tracking, and reporting on mobile devices.",
+  //   role: "UI/UX Developer (Full Stack Web Developer)",
+  //   contribution:
+  //     "Designed mobile-first service dashboards, job execution flows, OTP-based closures, geo-location tracking, expense logging, and technician checklists.",
+  //   technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
+  // },
   
-  {
-    id: "presales dashboard",
-    name: "Presales Kanban & Workflow Controller",
-    objective: "Visualize and manage presales progression across multiple workflow stages.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Designed a Kanban-based workflow controller to track cold, warm, and hot presales stages with drill-down views, document navigation, and status-based filtering for sales teams.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
-  {
-    id: "contact verification",
-    name: "OIMS Contact Verification System",
-    objective: "Ensure secure and accurate customer and supplier data verification within ERP.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Built OTP-based phone and email verification workflows with prefilled data review, status tracking, and automated ERP updates.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
-  {
-    id: "telecalling dashboard",
-    name: "Telecalling Dashboard (Presales Module)",
-    objective: "Centralize and manage presales telecalling activities within the ERP system.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Designed and developed a presales telecalling dashboard with structured listings, activity tracking, call logs, follow-ups, and document-based views to improve presales workflow visibility.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
-  {
-    id: "contract dashboard",
-    name: "Contract & Service Management Dashboard",
-    objective: "Enhance contract management by integrating service and AMC tracking into a unified ERP view.",
-    role: "UI/UX Developer (Full Stack Web Developer)",
-    contribution:
-      "Designed and developed a document-based contract dashboard with integrated AMC workflows, service listings, visit history, and scheduling features.",
-    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
-  },
+  // {
+  //   id: "presales dashboard",
+  //   name: "Presales Kanban & Workflow Controller",
+  //   objective: "Visualize and manage presales progression across multiple workflow stages.",
+  //   role: "UI/UX Developer (Full Stack Web Developer)",
+  //   contribution:
+  //     "Designed a Kanban-based workflow controller to track cold, warm, and hot presales stages with drill-down views, document navigation, and status-based filtering for sales teams.",
+  //   technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
+  // },
+  // {
+  //   id: "contact verification",
+  //   name: "OIMS Contact Verification System",
+  //   objective: "Ensure secure and accurate customer and supplier data verification within ERP.",
+  //   role: "UI/UX Developer (Full Stack Web Developer)",
+  //   contribution:
+  //     "Built OTP-based phone and email verification workflows with prefilled data review, status tracking, and automated ERP updates.",
+  //   technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
+  // },
+  // {
+  //   id: "telecalling dashboard",
+  //   name: "Telecalling Dashboard (Presales Module)",
+  //   objective: "Centralize and manage presales telecalling activities within the ERP system.",
+  //   role: "UI/UX Developer (Full Stack Web Developer)",
+  //   contribution:
+  //     "Designed and developed a presales telecalling dashboard with structured listings, activity tracking, call logs, follow-ups, and document-based views to improve presales workflow visibility.",
+  //   technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
+  // },
+  // {
+  //   id: "contract dashboard",
+  //   name: "Contract & Service Management Dashboard",
+  //   objective: "Enhance contract management by integrating service and AMC tracking into a unified ERP view.",
+  //   role: "UI/UX Developer (Full Stack Web Developer)",
+  //   contribution:
+  //     "Designed and developed a document-based contract dashboard with integrated AMC workflows, service listings, visit history, and scheduling features.",
+  //   technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "HTML", "CSS", "AJAX"]
+  // },
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [
