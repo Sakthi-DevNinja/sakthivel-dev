@@ -92,78 +92,78 @@ export const CONFIDENTIAL_NOTICE = "Most of the ERP and internal system work sho
 
 export const PRODUCTS: Product[] = [
 
-  {
-    id: "saporitos",
-    name: "Saporito’s Italian Restaurant & Pizzeria",
-    tagline: "A Responsive Website for Modern Dining",
-    description: "A responsive and user-friendly restaurant website built to showcase menu offerings, restaurant information, locations, and online ordering options for Saporito’s Italian Restaurant & Pizzeria.",
-    problemStatement: "The restaurant needed a clean and modern website to present its menu, special offers, and online ordering options clearly while ensuring a smooth experience across desktop and mobile devices.",
-    solutionStatement: "Designed and developed a responsive restaurant website with structured navigation, clear call-to-action for online ordering, and visually organized content to improve customer engagement and accessibility.",
-    impactStatement: "Enhanced the restaurant’s online presence, improved menu visibility, and enabled customers to easily explore offerings and place online orders from any device.",
-    features: [
-      "Responsive restaurant website for desktop and mobile",
-      "Menu display with categories and visual hierarchy",
-      "Online ordering (takeout and delivery) call-to-action flow",
-      "Special offers and promotional content sections",
-      "Restaurant information including location and contact details",
-      "SEO-friendly structure and content layout"
-    ],
-    developerContribution: "Worked as a Full Stack Web Developer. Designed and developed the complete restaurant website, implemented menu and content sections, integrated online ordering navigation, and ensured responsive behavior and usability across devices.",
-    techStack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "jQuery",
-      "jQuery Template",
-      "PHP",
-      "MySQL",
-      "Responsive Design"
-    ],
-    organization: "EssEmm Technologies",
-    status: "Live",
-    liveLink: "https://saporitosonline.com/",
-    isConfidential: false,
-    gallery: [
-      "../../products/saporitos/mockup.webp",
-      "../../products/saporitos/home.webp",
-      "../../products/saporitos/menu.webp",
-      "../../products/saporitos/catering.webp",
-      "../../products/saporitos/daily.webp",
-      "../../products/saporitos/coupons.webp",
-      "../../products/saporitos/about.webp",
-      "../../products/saporitos/contact.webp",
-      "../../products/saporitos/seo.webp"
-    ]
-  },
-  {
-    id: "mirabella-app",
-    name: "Mirabella Ministry",
-    tagline: "A Digital Platform for Global Faith & Community Outreach",
-    description: "A full-stack web application built to support Mirabella Ministry, enabling the sharing of spiritual content, prayer requests, events, broadcasts, and ministry resources for a global audience.",
-    problemStatement: "Mirabella Ministry required a centralized digital platform to manage spiritual content, community engagement, prayer requests, and event information without relying solely on social media platforms.",
-    solutionStatement: "Designed and developed a custom web application that allows the ministry to publish devotionals, broadcasts, events, and resources, while enabling users worldwide to submit prayer requests and engage with the ministry online.",
-    impactStatement: "Enabled Mirabella Ministry to strengthen global outreach, improve community engagement, and provide structured access to spiritual resources across devices.",
-    features: [
-      "Prayer request submission and management",
-      "Devotionals and spiritual content publishing",
-      "Event listings and ministry activity updates",
-      "Broadcast and media sharing pages",
-      "Testimonies and community engagement sections",
-      "Structured navigation for ministry resources",
-      "Responsive design for mobile and desktop"
-    ],
-    developerContribution: "Worked as Project Owner and Full Stack Web Developer. Designed the application architecture, developed backend and frontend features, implemented content and prayer request modules, and ensured responsive and user-friendly experiences across devices.",
-    techStack: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
-    organization: "EssEmm Technologies",
-    status: "Live",
-    liveLink: "https://mirabellaapp.org/",
-    isConfidential: false,
-    gallery: [
-      "../../products/mirabella/mockup.webp",
-      "../../products/mirabella/opening page.webp",
-      "../../products/mirabella/desktop mockup.webp"
-    ]
-  }
+  // {
+  //   id: "saporitos",
+  //   name: "Saporito’s Italian Restaurant & Pizzeria",
+  //   tagline: "A Responsive Website for Modern Dining",
+  //   description: "A responsive and user-friendly restaurant website built to showcase menu offerings, restaurant information, locations, and online ordering options for Saporito’s Italian Restaurant & Pizzeria.",
+  //   problemStatement: "The restaurant needed a clean and modern website to present its menu, special offers, and online ordering options clearly while ensuring a smooth experience across desktop and mobile devices.",
+  //   solutionStatement: "Designed and developed a responsive restaurant website with structured navigation, clear call-to-action for online ordering, and visually organized content to improve customer engagement and accessibility.",
+  //   impactStatement: "Enhanced the restaurant’s online presence, improved menu visibility, and enabled customers to easily explore offerings and place online orders from any device.",
+  //   features: [
+  //     "Responsive restaurant website for desktop and mobile",
+  //     "Menu display with categories and visual hierarchy",
+  //     "Online ordering (takeout and delivery) call-to-action flow",
+  //     "Special offers and promotional content sections",
+  //     "Restaurant information including location and contact details",
+  //     "SEO-friendly structure and content layout"
+  //   ],
+  //   developerContribution: "Worked as a Full Stack Web Developer. Designed and developed the complete restaurant website, implemented menu and content sections, integrated online ordering navigation, and ensured responsive behavior and usability across devices.",
+  //   techStack: [
+  //     "HTML",
+  //     "CSS",
+  //     "JavaScript",
+  //     "jQuery",
+  //     "jQuery Template",
+  //     "PHP",
+  //     "MySQL",
+  //     "Responsive Design"
+  //   ],
+  //   organization: "EssEmm Technologies",
+  //   status: "Live",
+  //   liveLink: "https://saporitosonline.com/",
+  //   isConfidential: false,
+  //   gallery: [
+  //     "../../products/saporitos/mockup.webp",
+  //     "../../products/saporitos/home.webp",
+  //     "../../products/saporitos/menu.webp",
+  //     "../../products/saporitos/catering.webp",
+  //     "../../products/saporitos/daily.webp",
+  //     "../../products/saporitos/coupons.webp",
+  //     "../../products/saporitos/about.webp",
+  //     "../../products/saporitos/contact.webp",
+  //     "../../products/saporitos/seo.webp"
+  //   ]
+  // },
+  // {
+  //   id: "mirabella-app",
+  //   name: "Mirabella Ministry",
+  //   tagline: "A Digital Platform for Global Faith & Community Outreach",
+  //   description: "A full-stack web application built to support Mirabella Ministry, enabling the sharing of spiritual content, prayer requests, events, broadcasts, and ministry resources for a global audience.",
+  //   problemStatement: "Mirabella Ministry required a centralized digital platform to manage spiritual content, community engagement, prayer requests, and event information without relying solely on social media platforms.",
+  //   solutionStatement: "Designed and developed a custom web application that allows the ministry to publish devotionals, broadcasts, events, and resources, while enabling users worldwide to submit prayer requests and engage with the ministry online.",
+  //   impactStatement: "Enabled Mirabella Ministry to strengthen global outreach, improve community engagement, and provide structured access to spiritual resources across devices.",
+  //   features: [
+  //     "Prayer request submission and management",
+  //     "Devotionals and spiritual content publishing",
+  //     "Event listings and ministry activity updates",
+  //     "Broadcast and media sharing pages",
+  //     "Testimonies and community engagement sections",
+  //     "Structured navigation for ministry resources",
+  //     "Responsive design for mobile and desktop"
+  //   ],
+  //   developerContribution: "Worked as Project Owner and Full Stack Web Developer. Designed the application architecture, developed backend and frontend features, implemented content and prayer request modules, and ensured responsive and user-friendly experiences across devices.",
+  //   techStack: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+  //   organization: "EssEmm Technologies",
+  //   status: "Live",
+  //   liveLink: "https://mirabellaapp.org/",
+  //   isConfidential: false,
+  //   gallery: [
+  //     "../../products/mirabella/mockup.webp",
+  //     "../../products/mirabella/opening page.webp",
+  //     "../../products/mirabella/desktop mockup.webp"
+  //   ]
+  // }
   // ,
   // {
   //   id: "service-app",
@@ -308,16 +308,16 @@ export const EXPERIENCE: ExperienceItem[] = [
           "Maintaining and enhancing existing applications by fixing issues, improving UI/UX, and implementing new features.",
           "Actively contributing to product improvements in a production ERP environment used by real business teams."
         ],
-        details: [
-          "Custom ERP dashboards providing real-time business insights",
-          "Presales and telecalling dashboards with task tracking and follow-ups",
-          "Contract and service management workflows with AMC tracking",
-          "Internal ERP tools to optimize business processes and usability",
-          "Reports and analytics modules for business decision-making",
-          "Document-based ERP views for structured data handling",
-          "Service workflow tracking including scheduling and visit history",
-          "UI/UX improvements across complex and legacy ERP systems"
-        ]
+        // details: [
+        //   "Custom ERP dashboards providing real-time business insights",
+        //   "Presales and telecalling dashboards with task tracking and follow-ups",
+        //   "Contract and service management workflows with AMC tracking",
+        //   "Internal ERP tools to optimize business processes and usability",
+        //   "Reports and analytics modules for business decision-making",
+        //   "Document-based ERP views for structured data handling",
+        //   "Service workflow tracking including scheduling and visit history",
+        //   "UI/UX improvements across complex and legacy ERP systems"
+        // ]
 
       },
       {
